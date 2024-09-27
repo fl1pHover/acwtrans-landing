@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ACW Trans - International Freight Forwarding Company</title>
+
+    <link rel="stylesheet" href="/style.css" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            boxShadow: {
+              // "3xl": "0 0px 30px 0px rgba(0, 0, 0, 0.1)",
+              custom: "0 0px 30px rgba(0, 0, 0, 0.1)",
+
+              // '3xl': '0 35px 60px -15px rgba(0, 0, 0, 0.3)'
+            },
+            colors: {
+              background: "var(--background)",
+              foreground: "var(--foreground)",
+              sec: {
+                DEFAULT: "#13285a",
+                600: "#1A2D4E",
+              },
+              light: "#ecf0f3",
+              dark: "#0f1b24",
+            },
+            borderRadius: {
+              lg: "var(--radius)",
+              md: "calc(var(--radius) - 2px)",
+              sm: "calc(var(--radius) - 4px)",
+            },
+          },
+        },
+      };
+    </script>
+
+    <style type="text/tailwindcss">
+      @import url("https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+
+      /* :root {
+        --background: #ffffff;
+        --foreground: #171717;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --background: #0a0a0a;
+          --foreground: #ededed;
+        }
+      }
+
+      body {
+        color: var(--foreground);
+        background: var(--background);
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      @layer utilities {
+        .text-balance {
+          text-wrap: balance;
+        }
+      } */
+
+      @layer base {
+        .font-outline {
+          -webkit-text-stroke: 1px black;
+        }
+
+        .smooth {
+          transition: 0.5s ease, height 0.4s !important;
+        }
+
+        body {
+          font-family: "Nunito", sans-serif;
+          @apply bg-light text-sec;
+        }
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+          font-family: "Roboto", sans-serif;
+        }
+        .shadow-custom {
+          box-shadow: 0 0px 30px rgba(0, 0, 0, 1);
+        }
+
+        .text-w-border {
+          -webkit-text-stroke: 2px white; /* width and color */
+        }
+        .acw-form::after {
+          position: absolute;
+          content: "";
+          width: 100%;
+          height: 100%;
+          top: 0px;
+          left: 0px;
+          z-index: -1;
+          background: rgba(255, 255, 255, 1);
+          clip-path: polygon(
+            calc(100% - 90.142px) 5.85786px,
+            calc(100% - 90.142px) 5.85786px,
+            calc(100% - 91.306261px) 4.78241496px,
+            calc(100% - 92.543968px) 3.80836608px,
+            calc(100% - 93.848407px) 2.93849472px,
+            calc(100% - 95.212864px) 2.17558224px,
+            calc(100% - 96.630625px) 1.52241px,
+            calc(100% - 98.094976px) 0.98175936px,
+            calc(100% - 99.599203px) 0.55641168px,
+            calc(100% - 101.136592px) 0.24914832px,
+            calc(100% - 102.700429px) 0.06275064px,
+            calc(100% - 104.284px) 0px,
+            20px 0px,
+            20px 0px,
+            16.75589733px 0.2617661px,
+            13.67845504px 1.0196128px,
+            10.80885071px 2.2323627px,
+            8.18826192px 3.8588384px,
+            5.85786625px 5.8578625px,
+            3.85884128px 8.1882576px,
+            2.23236459px 10.8088463px,
+            1.01961376px 13.6784512px,
+            0.26176637px 16.7558949px,
+            0px 20px,
+            0px calc(100% - 20px),
+            0px calc(100% - 20px),
+            0.26176637px calc(100% - 16.755822px),
+            1.01961376px calc(100% - 13.678336px),
+            2.23236459px calc(100% - 10.808714px),
+            3.85884128px calc(100% - 8.188128px),
+            5.85786625px calc(100% - 5.85775px),
+            8.18826192px calc(100% - 3.858752px),
+            10.80885071px calc(100% - 2.232306px),
+            13.67845504px calc(100% - 1.019584px),
+            16.75589733px calc(100% - 0.261758px),
+            20px calc(100% - 0px),
+            calc(100% - 20px) calc(100% - 0px),
+            calc(100% - 20px) calc(100% - 0px),
+            calc(100% - 16.755822px) calc(100% - 0.261758px),
+            calc(100% - 13.678336px) calc(100% - 1.019584px),
+            calc(100% - 10.808714px) calc(100% - 2.232306px),
+            calc(100% - 8.188128px) calc(100% - 3.858752px),
+            calc(100% - 5.85775px) calc(100% - 5.85775px),
+            calc(100% - 3.858752px) calc(100% - 8.188128px),
+            calc(100% - 2.232306px) calc(100% - 10.808714px),
+            calc(100% - 1.019584px) calc(100% - 13.678336px),
+            calc(100% - 0.261758px) calc(100% - 16.755822px),
+            calc(100% - 0px) calc(100% - 20px),
+            calc(100% - 0px) 104.284px,
+            calc(100% - 0px) 104.284px,
+            calc(100% - 0.062747px) 102.7004021px,
+            calc(100% - 0.249136px) 101.1365448px,
+            calc(100% - 0.556389px) 99.5991427px,
+            calc(100% - 0.981728px) 98.0949104px,
+            calc(100% - 1.522375px) 96.6305625px,
+            calc(100% - 2.175552px) 95.2128136px,
+            calc(100% - 2.938481px) 93.8483783px,
+            calc(100% - 3.808384px) 92.5439712px,
+            calc(100% - 4.782483px) 91.3063069px,
+            calc(100% - 5.858px) 90.1421px,
+            calc(100% - 90.142px) 5.85786px
+          );
+        }
+      }
+    </style>
+
+    <script></script>
+  </head>
+  <body id="smooth-wrapper">
+    <div class="flex flex-col">
+      <div class="mx-5 mb-2 text-sm text-white bg-sec rounded-b-xl">
+        <ul class="flex mx-auto max-w-7xl">
+          <li class="border-x border-slate-600">
+            <div
+              class="flex items-center gap-2 p-2 px-4 transition hover:text-sky-400 hover:-translate-x-1"
+            >
+              <svg
+                id="fi_3059457"
+                height="512"
+                viewBox="0 0 32 32"
+                width="512"
+                xmlns="http://www.w3.org/2000/svg"
+                class="fill-sky-400 h-4 w-4"
+              >
+                <path
+                  d="m30.035 22.594c-.053-.044-6.049-4.31-7.668-4.049-.781.138-1.227.671-2.122 1.737-.144.172-.491.583-.759.876a12.458 12.458 0 0 1 -1.651-.672 13.7 13.7 0 0 1 -6.321-6.321 12.458 12.458 0 0 1 -.672-1.651c.294-.269.706-.616.882-.764 1.061-.89 1.593-1.337 1.731-2.119.283-1.619-4.005-7.613-4.049-7.667a2.289 2.289 0 0 0 -1.706-.964c-1.738 0-6.7 6.436-6.7 7.521 0 .063.091 6.467 7.988 14.5 8.024 7.888 14.428 7.979 14.491 7.979 1.084 0 7.521-4.962 7.521-6.7a2.291 2.291 0 0 0 -.965-1.706zm-6.667 6.4c-.868-.074-6.248-.783-12.968-7.384-6.633-6.753-7.324-12.142-7.393-12.977a27.054 27.054 0 0 1 4.706-5.561c.04.04.093.1.161.178a35.391 35.391 0 0 1 3.574 6.063 11.886 11.886 0 0 1 -1.016.911 10.033 10.033 0 0 0 -1.512 1.422 1 1 0 0 0 -.171.751 11.418 11.418 0 0 0 .965 2.641 15.71 15.71 0 0 0 7.248 7.247 11.389 11.389 0 0 0 2.641.966.991.991 0 0 0 .751-.171 10.075 10.075 0 0 0 1.427-1.518c.314-.374.733-.873.892-1.014a35.146 35.146 0 0 1 6.076 3.578c.083.07.142.124.181.159a27.036 27.036 0 0 1 -5.562 4.707z"
+                ></path>
+                <path
+                  d="m23 15h2a8.009 8.009 0 0 0 -8-8v2a6.006 6.006 0 0 1 6 6z"
+                ></path>
+                <path
+                  d="m28 15h2a13.015 13.015 0 0 0 -13-13v2a11.013 11.013 0 0 1 11 11z"
+                ></path>
+              </svg>
+
+              <a href="">(+976) 7011-5028</a>
+            </div>
+          </li>
+          <li class="border-x border-slate-600">
+            <div
+              class="flex items-center gap-2 p-2 px-4 transition hover:text-sky-400 hover:-translate-x-1"
+            >
+              <svg
+                version="1.1"
+                id="fi_646094"
+                xmlns="http://www.w3.org/2000/svg"
+                x="0px"
+                y="0px"
+                viewBox="0 0 512 512"
+                class="fill-sky-400 h-4 w-4"
+              >
+                <g>
+                  <g>
+                    <path
+                      d="M467,76H45C20.137,76,0,96.262,0,121v270c0,24.885,20.285,45,45,45h422c24.655,0,45-20.03,45-45V121
+                  C512,96.306,491.943,76,467,76z M460.698,106c-9.194,9.145-167.415,166.533-172.878,171.967c-8.5,8.5-19.8,13.18-31.82,13.18
+                  s-23.32-4.681-31.848-13.208C220.478,274.284,64.003,118.634,51.302,106H460.698z M30,384.894V127.125L159.638,256.08L30,384.894z
+                   M51.321,406l129.587-128.763l22.059,21.943c14.166,14.166,33,21.967,53.033,21.967c20.033,0,38.867-7.801,53.005-21.939
+                  l22.087-21.971L460.679,406H51.321z M482,384.894L352.362,256.08L482,127.125V384.894z"
+                    ></path>
+                  </g>
+                </g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+              </svg>
+
+              <a href="">info@acwtrans.mn</a>
+            </div>
+          </li>
+          <li class="border-x border-slate-600">
+            <div
+              class="flex items-center gap-2 p-2 px-4 transition hover:text-sky-400 hover:-translate-x-1"
+            >
+              <svg
+                id="fi_3059457"
+                height="512"
+                viewBox="0 0 32 32"
+                width="512"
+                xmlns="http://www.w3.org/2000/svg"
+                class="fill-sky-400 h-4 w-4"
+              >
+                <path
+                  d="m30.035 22.594c-.053-.044-6.049-4.31-7.668-4.049-.781.138-1.227.671-2.122 1.737-.144.172-.491.583-.759.876a12.458 12.458 0 0 1 -1.651-.672 13.7 13.7 0 0 1 -6.321-6.321 12.458 12.458 0 0 1 -.672-1.651c.294-.269.706-.616.882-.764 1.061-.89 1.593-1.337 1.731-2.119.283-1.619-4.005-7.613-4.049-7.667a2.289 2.289 0 0 0 -1.706-.964c-1.738 0-6.7 6.436-6.7 7.521 0 .063.091 6.467 7.988 14.5 8.024 7.888 14.428 7.979 14.491 7.979 1.084 0 7.521-4.962 7.521-6.7a2.291 2.291 0 0 0 -.965-1.706zm-6.667 6.4c-.868-.074-6.248-.783-12.968-7.384-6.633-6.753-7.324-12.142-7.393-12.977a27.054 27.054 0 0 1 4.706-5.561c.04.04.093.1.161.178a35.391 35.391 0 0 1 3.574 6.063 11.886 11.886 0 0 1 -1.016.911 10.033 10.033 0 0 0 -1.512 1.422 1 1 0 0 0 -.171.751 11.418 11.418 0 0 0 .965 2.641 15.71 15.71 0 0 0 7.248 7.247 11.389 11.389 0 0 0 2.641.966.991.991 0 0 0 .751-.171 10.075 10.075 0 0 0 1.427-1.518c.314-.374.733-.873.892-1.014a35.146 35.146 0 0 1 6.076 3.578c.083.07.142.124.181.159a27.036 27.036 0 0 1 -5.562 4.707z"
+                ></path>
+                <path
+                  d="m23 15h2a8.009 8.009 0 0 0 -8-8v2a6.006 6.006 0 0 1 6 6z"
+                ></path>
+                <path
+                  d="m28 15h2a13.015 13.015 0 0 0 -13-13v2a11.013 11.013 0 0 1 11 11z"
+                ></path>
+              </svg>
+              <a href="">+976 9999 9999</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <nav
+      id="nav"
+      class="sticky top-0 left-0 z-50 w-full h-full font-bold bg-light px-6 duration-500"
+    >
+      <div
+        class="grid items-center grid-cols-2 py-2 mx-auto lg:grid-cols-3 max-w-7xl"
+      >
+        <div class="items-center hidden gap-10 lg:flex">
+          <a
+            href="index.html"
+            class="py-4 transition text-sec hover:text-red-500 hover:translate-y-1"
+          >
+            Нүүр
+          </a>
+          <a
+            href="about.html"
+            class="py-4 transition text-sec hover:text-red-500 hover:translate-y-1"
+          >
+            Бидний тухай
+          </a>
+          <a
+            href="service.html"
+            class="py-4 transition text-sec hover:text-red-500 hover:translate-y-1"
+          >
+            Үйлчилгээ
+          </a>
+          <a
+            href="faq.html"
+            class="py-4 transition text-sec hover:text-red-500 hover:translate-y-1"
+          >
+            FAQ
+          </a>
+        </div>
+
+        <a href="/" class="flex justify-start lg:justify-center">
+          <img
+            src="https://acwtrans.mn/wp-content/uploads/2020/07/logo-tsagaan-border-2.png"
+            alt="logo"
+            class="max-w-64"
+          />
+        </a>
+        <div class="flex justify-end gap-2 mr-4">
+          <button
+            class="flex items-center gap-1 p-2 transition border-2 rounded-xl border-slate-300 bg-slate-100 hover:bg-slate-200 text-slate-600"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 100 100"
+              class="fill-sec w-5 h-5"
+              id="fi_2889312"
+            >
+              <g id="Layer_2" data-name="Layer 2">
+                <path
+                  d="M87.95636,73.23224a44.29242,44.29242,0,0,0,6.54358-23.23145L94.5,50l-.00006-.00079a44.2927,44.2927,0,0,0-6.54376-23.23169l-.02442-.03815a44.5022,44.5022,0,0,0-75.8634-.00031l-.02472.03864a44.51347,44.51347,0,0,0-.00018,46.46436l.02514.03918a44.50213,44.50213,0,0,0,75.86292-.00037Zm-32.26825,13.641a10.81448,10.81448,0,0,1-2.8894,1.99561,6.52134,6.52134,0,0,1-5.59748,0,13.62135,13.62135,0,0,1-5.04809-4.44233,39.77474,39.77474,0,0,1-5.74762-12.47064Q43.19588,71.538,50,71.53021q6.80127,0,13.59521.42572a50.19826,50.19826,0,0,1-2.438,6.71222A25.80323,25.80323,0,0,1,55.68811,86.87329ZM10.587,52.5H28.536a88.30459,88.30459,0,0,0,1.62274,14.91418q-7.35983.64766-14.68207,1.779A39.23059,39.23059,0,0,1,10.587,52.5Zm4.88964-21.69324Q22.796,31.941,30.16388,32.58618A88.15014,88.15014,0,0,0,28.5376,47.5H10.587A39.2306,39.2306,0,0,1,15.47662,30.80676ZM44.31183,13.12665a10.81146,10.81146,0,0,1,2.8894-1.99561,6.52134,6.52134,0,0,1,5.59748,0,13.62131,13.62131,0,0,1,5.04809,4.44232A39.77482,39.77482,0,0,1,63.59436,28.044Q56.804,28.46185,50,28.46973q-6.80127-.00009-13.59528-.42578a50.18985,50.18985,0,0,1,2.43805-6.71216A25.80254,25.80254,0,0,1,44.31183,13.12665ZM89.413,47.5H71.464a88.31173,88.31173,0,0,0-1.62274-14.91425q7.35992-.64764,14.68207-1.779A39.2306,39.2306,0,0,1,89.413,47.5ZM35.18756,67.02545A82.69645,82.69645,0,0,1,33.53729,52.5H66.4632a82.67828,82.67828,0,0,1-1.64728,14.52563Q57.41607,66.54,50,66.53027,42.58927,66.53018,35.18756,67.02545Zm29.62482-34.051A82.70224,82.70224,0,0,1,66.46259,47.5H33.53674A82.67914,82.67914,0,0,1,35.184,32.97424q7.39985.4855,14.816.49543Q57.41074,33.46967,64.81238,32.97449ZM71.46228,52.5H89.413a39.23052,39.23052,0,0,1-4.88971,16.69318q-7.31936-1.13435-14.68719-1.77942A88.14559,88.14559,0,0,0,71.46228,52.5ZM81.52539,26.20477q-6.39945.92331-12.83734,1.462a57.01792,57.01792,0,0,0-2.9754-8.39581,35.48007,35.48007,0,0,0-4.13984-7.04529A39.49152,39.49152,0,0,1,81.52539,26.20477ZM22.06915,22.06915a39.48682,39.48682,0,0,1,16.3559-9.84289c-.09369.12134-.19006.2373-.28241.36114A45.64338,45.64338,0,0,0,31.321,27.66754q-6.43816-.54528-12.84643-1.46277A39.82535,39.82535,0,0,1,22.06915,22.06915Zm-3.5946,51.726q6.39943-.9234,12.83728-1.462A57.01789,57.01789,0,0,0,34.28729,80.729a35.48425,35.48425,0,0,0,4.13983,7.04529A39.49154,39.49154,0,0,1,18.47455,73.79517Zm59.45624,4.13562a39.48587,39.48587,0,0,1-16.3559,9.84289c.09369-.12134.19-.2373.28241-.36114A45.64338,45.64338,0,0,0,68.679,72.3324q6.43816.54528,12.84643,1.46277A39.82535,39.82535,0,0,1,77.93079,77.93079Z"
+                ></path>
+              </g>
+            </svg>
+            MN
+          </button>
+
+          <a
+            href="tel:+97670115028"
+            class="relative flex items-center gap-2 group h-11"
+          >
+            <div
+              class="relative z-10 flex items-center px-6 py-2 text-white bg-red-500 group-hover:bg-sec-600 font-semibold size-full rounded-xl"
+            >
+              <div class="relative overflow-hidden">
+                <span
+                  class="relative top-0 transition-all duration-300 group-hover:-top-10"
+                >
+                  Холбогдох
+                </span>
+                <span
+                  class="absolute duration-300 left-[50%] -translate-x-[50%] top-20 transition-all group-hover:top-[50%] -translate-y-[50%]"
+                >
+                  Холбогдох
+                </span>
+              </div>
+            </div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              version="1.1"
+              width="44"
+              height="44"
+              class="absolute top-[50%] transition-all -translate-y-[50%] group-hover:scale-y-0 duration fill-red-500 right-7 flex items-center justify-center"
+            >
+              <path
+                d="M0 0 C10.02766385 0 11.78016344 0.0022601 18.375 6.25 C21.21594016 8.14396011 23.33275869 8.80093012 26.765625 8.671875 C30.69416391 7.4905661 33.34474692 4.58563598 36.21484375 1.75 C39 0 39 0 48 0 C48 14.52 48 29.04 48 44 C39.48205443 44 37.45308287 43.27134166 31.625 37.75 C28.78104578 35.85403052 26.66245567 35.19943986 23.2265625 35.328125 C19.34599355 36.4991037 16.77099216 39.40514781 13.98046875 42.25 C11 44 11 44 0 44 C0 29.48 0 14.96 0 0 Z "
+              ></path>
+            </svg>
+            <div
+              class="border-4 h-full group-hover:border-sec-600 border-red-500 aspect-[1/1] rounded-2xl relative bg-light grid place-items-center"
+            >
+              <div class="relative overflow-hidden">
+                <svg
+                  id="fi_3059457"
+                  height="512"
+                  viewBox="0 0 32 32"
+                  width="512"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-5 h-5 group-hover:translate-x-10 duration-300 transition-all fill-red-500"
+                >
+                  <path
+                    d="m30.035 22.594c-.053-.044-6.049-4.31-7.668-4.049-.781.138-1.227.671-2.122 1.737-.144.172-.491.583-.759.876a12.458 12.458 0 0 1 -1.651-.672 13.7 13.7 0 0 1 -6.321-6.321 12.458 12.458 0 0 1 -.672-1.651c.294-.269.706-.616.882-.764 1.061-.89 1.593-1.337 1.731-2.119.283-1.619-4.005-7.613-4.049-7.667a2.289 2.289 0 0 0 -1.706-.964c-1.738 0-6.7 6.436-6.7 7.521 0 .063.091 6.467 7.988 14.5 8.024 7.888 14.428 7.979 14.491 7.979 1.084 0 7.521-4.962 7.521-6.7a2.291 2.291 0 0 0 -.965-1.706zm-6.667 6.4c-.868-.074-6.248-.783-12.968-7.384-6.633-6.753-7.324-12.142-7.393-12.977a27.054 27.054 0 0 1 4.706-5.561c.04.04.093.1.161.178a35.391 35.391 0 0 1 3.574 6.063 11.886 11.886 0 0 1 -1.016.911 10.033 10.033 0 0 0 -1.512 1.422 1 1 0 0 0 -.171.751 11.418 11.418 0 0 0 .965 2.641 15.71 15.71 0 0 0 7.248 7.247 11.389 11.389 0 0 0 2.641.966.991.991 0 0 0 .751-.171 10.075 10.075 0 0 0 1.427-1.518c.314-.374.733-.873.892-1.014a35.146 35.146 0 0 1 6.076 3.578c.083.07.142.124.181.159a27.036 27.036 0 0 1 -5.562 4.707z"
+                  ></path>
+                  <path
+                    d="m23 15h2a8.009 8.009 0 0 0 -8-8v2a6.006 6.006 0 0 1 6 6z"
+                  ></path>
+                  <path
+                    d="m28 15h2a13.015 13.015 0 0 0 -13-13v2a11.013 11.013 0 0 1 11 11z"
+                  ></path>
+                </svg>
+                <svg
+                  id="fi_3059457"
+                  height="512"
+                  viewBox="0 0 32 32"
+                  width="512"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-5 h-5 absolute top-[50%] -translate-y-[50%] -left-[100%] group-hover:left-0 duration-300 transition-all fill-sec"
+                >
+                  <path
+                    d="m30.035 22.594c-.053-.044-6.049-4.31-7.668-4.049-.781.138-1.227.671-2.122 1.737-.144.172-.491.583-.759.876a12.458 12.458 0 0 1 -1.651-.672 13.7 13.7 0 0 1 -6.321-6.321 12.458 12.458 0 0 1 -.672-1.651c.294-.269.706-.616.882-.764 1.061-.89 1.593-1.337 1.731-2.119.283-1.619-4.005-7.613-4.049-7.667a2.289 2.289 0 0 0 -1.706-.964c-1.738 0-6.7 6.436-6.7 7.521 0 .063.091 6.467 7.988 14.5 8.024 7.888 14.428 7.979 14.491 7.979 1.084 0 7.521-4.962 7.521-6.7a2.291 2.291 0 0 0 -.965-1.706zm-6.667 6.4c-.868-.074-6.248-.783-12.968-7.384-6.633-6.753-7.324-12.142-7.393-12.977a27.054 27.054 0 0 1 4.706-5.561c.04.04.093.1.161.178a35.391 35.391 0 0 1 3.574 6.063 11.886 11.886 0 0 1 -1.016.911 10.033 10.033 0 0 0 -1.512 1.422 1 1 0 0 0 -.171.751 11.418 11.418 0 0 0 .965 2.641 15.71 15.71 0 0 0 7.248 7.247 11.389 11.389 0 0 0 2.641.966.991.991 0 0 0 .751-.171 10.075 10.075 0 0 0 1.427-1.518c.314-.374.733-.873.892-1.014a35.146 35.146 0 0 1 6.076 3.578c.083.07.142.124.181.159a27.036 27.036 0 0 1 -5.562 4.707z"
+                  ></path>
+                  <path
+                    d="m23 15h2a8.009 8.009 0 0 0 -8-8v2a6.006 6.006 0 0 1 6 6z"
+                  ></path>
+                  <path
+                    d="m28 15h2a13.015 13.015 0 0 0 -13-13v2a11.013 11.013 0 0 1 11 11z"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="h-[80vh] m-5 mt-2 overflow-hidden rounded-3xl relative">
+      <svg
+        class="absolute bottom-0 left-0 z-20"
+        width="210"
+        height="140"
+        viewBox="0 0 210 140"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect x="70" y="70" width="70" height="70" fill="#ffffff33"></rect>
+        <path
+          d="M0 70H70V140H20C8.9543 140 0 131.046 0 120V70Z"
+          fill="#22222252"
+        ></path>
+        <rect x="140" y="70" width="70" height="70" fill="#ffffff0f"></rect>
+        <rect x="70" width="70" height="70" fill="#ffffff1a"></rect>
+      </svg>
+
+      <video
+        class="object-cover size-full"
+        autoplay
+        loop
+        muted
+        crossorigin="anonymous"
+      >
+        <source
+          src="https://themexriver.com/wp/logistify/logistify-hero-video.mp4"
+        />
+      </video>
+      <!-- {/*
+      <iframe
+        src="https://www.youtube.com/embed/KEFt2quibkg?si=KoPBelE3Jk0-gy0k&autoplay=1&controls=0&loop=1"
+        title="YouTube video player"
+        frameborder="0"
+        class="object-cover w-full h-full"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+      ></iframe>
+      -->
+      <video src="https://www.youtube.com/watch?v=KEFt2quibkg"></video>
+      <div
+        class="absolute top-0 left-0 z-10 flex items-center justify-center size-full bg-gradient-to-r to-70% from-sec to-transparent"
+      >
+        <div class="max-w-4xl mx-6">
+          <span class="p-1 px-2 font-bold text-white bg-red-500 rounded">
+            Acw Trans - International Freight Forwarding Company
+          </span>
+          <h1 class="my-4 text-5xl font-bold text-white">
+            Таны хүсэлд нийцсэн олон улсын тээврийн цогц үйлчилгээ
+          </h1>
+          <p class="my-6 text-lg font-medium text-white">
+            Хамгийн хямд үнийг та зөвхөн манайхаас л авах боломжтой
+          </p>
+          <div class="inline-flex">
+            <a
+              href="tel:+97670115028"
+              class="relative flex items-center gap-3 group h-12"
+            >
+              <div
+                class="relative z-10 flex items-center px-12 py-3 text-lg font-bold bg-white group-hover:text-white text-sec group-hover:bg-red-500 size-full rounded-xl"
+              >
+                <div class="relative overflow-hidden">
+                  <span
+                    class="relative top-0 transition-all duration-300 group-hover:-top-10"
+                  >
+                    Шалгах
+                  </span>
+                  <span
+                    class="absolute duration-300 left-[50%] -translate-x-[50%] top-20 transition-all group-hover:top-[50%] -translate-y-[50%]"
+                  >
+                    Шалгах
+                  </span>
+                </div>
+              </div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                version="1.1"
+                width="44"
+                height="44"
+                class="absolute top-[50%] transition-all -translate-y-[50%] group-hover:scale-y-0 duration fill-white right-8 flex items-center justify-center"
+              >
+                <path
+                  d="M0 0 C10.02766385 0 11.78016344 0.0022601 18.375 6.25 C21.21594016 8.14396011 23.33275869 8.80093012 26.765625 8.671875 C30.69416391 7.4905661 33.34474692 4.58563598 36.21484375 1.75 C39 0 39 0 48 0 C48 14.52 48 29.04 48 44 C39.48205443 44 37.45308287 43.27134166 31.625 37.75 C28.78104578 35.85403052 26.66245567 35.19943986 23.2265625 35.328125 C19.34599355 36.4991037 16.77099216 39.40514781 13.98046875 42.25 C11 44 11 44 0 44 C0 29.48 0 14.96 0 0 Z "
+                ></path>
+              </svg>
+              <div
+                class="border-4 h-full border-white aspect-[1/1] rounded-2xl relative bg-sec group-hover:bg-white transition-all group-hover:border-red-500 grid place-items-center"
+              >
+                <div class="relative overflow-hidden">
+                  <svg
+                    version="1.1"
+                    id="fi_447031"
+                    xmlns="http://www.w3.org/2000/svg"
+                    x="0px"
+                    y="0px"
+                    viewBox="0 0 512 512"
+                    class="w-4 h-4 group-hover:translate-x-10 duration-300 transition-all fill-white"
+                  >
+                    <g>
+                      <g>
+                        <path
+                          d="M256,0C153.755,0,70.573,83.182,70.573,185.426c0,126.888,165.939,313.167,173.004,321.035
+                      c6.636,7.391,18.222,7.378,24.846,0c7.065-7.868,173.004-194.147,173.004-321.035C441.425,83.182,358.244,0,256,0z M256,278.719
+                      c-51.442,0-93.292-41.851-93.292-93.293S204.559,92.134,256,92.134s93.291,41.851,93.291,93.293S307.441,278.719,256,278.719z"
+                        ></path>
+                      </g>
+                    </g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                  </svg>
+
+                  <svg
+                    version="1.1"
+                    id="fi_447031"
+                    xmlns="http://www.w3.org/2000/svg"
+                    x="0px"
+                    y="0px"
+                    viewBox="0 0 512 512"
+                    class="w-4 h-4 absolute top-[50%] -translate-y-[50%] -left-[100%] group-hover:left-0 duration-300 transition-all fill-red-600"
+                  >
+                    <g>
+                      <g>
+                        <path
+                          d="M256,0C153.755,0,70.573,83.182,70.573,185.426c0,126.888,165.939,313.167,173.004,321.035
+                    c6.636,7.391,18.222,7.378,24.846,0c7.065-7.868,173.004-194.147,173.004-321.035C441.425,83.182,358.244,0,256,0z M256,278.719
+                    c-51.442,0-93.292-41.851-93.292-93.293S204.559,92.134,256,92.134s93.291,41.851,93.291,93.293S307.441,278.719,256,278.719z"
+                        ></path>
+                      </g>
+                    </g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                  </svg>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="relative px-4 mx-auto my-20 max-w-7xl xl:px-0">
+      <div class="relative flex justify-center">
+        <img
+          class="absolute top-0 left-[50%] w-2/3 object-contain -translate-x-[50%]"
+          src="https://themexriver.com/wp/logistify/wp-content/uploads/2024/09/bg-shape.svg"
+          alt="bg-shape"
+        />
+        <h1 class="text-4xl font-bold text-sec-600">Үйлчилгээ</h1>
+        <!--<h1 class="text-[180px] font-bold absolute -top-10 left-[50%] -translate-x-[50%]   text-light drop-shadow-[0_0px_1px_rgba(0,0,0,0.3)]">
+          Үйлчилгээ
+        </h1> -->
+      </div>
+      <section class="my-10">
+        <div id="data-services" class="relative grid w-full grid-cols-6 gap-4">
+          <!-- Card -->
+          <!-- <button
+            class="relative flex flex-col items-center w-full gap-2 px-3 py-10 overflow-hidden font-bold transition bg-white border backdrop-blur-sm duration group rounded-xl shadow-custom"
+          >
+            <span
+              class="absolute top-0 left-0 flex justify-end w-0 h-full transition-all duration-500 bg-sec group-hover:w-full"
+            ></span>
+            <img
+              src="{el.img}"
+              class="w-12 transition-all group-hover:-translate-y-2"
+              alt=""
+            />
+            <h1
+              class="relative text-lg transition text-slate-600 group-hover:text-white"
+            >
+              {el.title}
+            </h1>
+            <p class="relative text-xs line-clamp-2 text-slate-400">
+              {el.desc}
+            </p>
+          </button> -->
+        </div>
+      </section>
+    </section>
+
+    <!-- Үнийи санал -->
+    <div
+      class="relative flex items-end justify-center min-h-[70vh] m-5 overflow-hidden bg-dark rounded-3xl"
+    >
+      <img
+        src="./assets/images/contact.jpg"
+        width="{2000}"
+        height="{2000}"
+        alt="image"
+        class="absolute object-cover size-full"
+      />
+      <div
+        class="absolute size-full bg-gradient-to-t from-sec-600/50 to-transparent"
+      ></div>
+      <div class="relative flex flex-col w-full max-w-4xl gap-10 px-6 py-20">
+        <div class="relative flex justify-center"></div>
+        <form action="" class="relative">
+          <h1
+            class="text-[180px] font-bold absolute -top-[25%] left-[50%] -translate-x-[50%] whitespace-nowrap text-transparent text-w-border opacity-30"
+          >
+            Үнийн санал авах
+          </h1>
+          <div
+            class="flex flex-col grid-cols-1 gap-4 p-10 sm:grid sm:grid-cols-6 rounded-xl backdrop-blur acw-form"
+          >
+            <h1 class="mb-10 text-6xl font-bold uppercase col-span-full">
+              Үнийн санал авах
+            </h1>
+            <div class="flex flex-col col-span-2 gap-1">
+              <label id="" class="font-bold text-slate-700">Имэйл Хаяг</label>
+              <input
+                type="email"
+                placeholder="Бичих"
+                name="email"
+                required
+                class="p-2 border-0 rounded focus:outline-red-500 bg-slate-200 focus:outline-0 focus:ring-0 ring-0 outline-0 focus:border-0"
+              />
+            </div>
+            <div class="flex flex-col col-span-2 gap-1">
+              <label id="" class="font-bold text-slate-700">
+                Утасны дугаар
+              </label>
+              <input
+                type="phone"
+                placeholder="Бичих"
+                name="phone"
+                required
+                class="p-2 border-0 rounded focus:outline-red-500 bg-slate-200 focus:outline-0 focus:ring-0 ring-0 outline-0 focus:border-0"
+              />
+            </div>
+            <div class="flex flex-col col-span-2 gap-1">
+              <label id="" class="font-bold text-slate-700">
+                Худалдааны нөхцөл
+              </label>
+
+              <select
+                name=""
+                id=""
+                class="p-2 border-0 rounded focus:outline-red-500 bg-slate-200 focus:outline-0 focus:ring-0 ring-0 outline-0 focus:border-0"
+              >
+                <option value="">Сонгох</option>
+                <option value="volvo">EXW</option>
+                <option value="saab">FCA</option>
+                <option value="mercedes">FAS</option>
+                <option value="audi">FOB</option>
+                <option value="audi">CFR</option>
+                <option value="audi">CIF</option>
+                <option value="audi">CPT</option>
+                <option value="audi">CIP</option>
+                <option value="audi">DAT</option>
+                <option value="audi">DAP</option>
+                <option value="audi" class="">DDP</option>
+              </select>
+            </div>
+
+            <div class="flex flex-col col-span-3 gap-1">
+              <label id="" class="font-bold text-slate-700">
+                Ачаа ачих газар
+              </label>
+              <input
+                type="text"
+                placeholder="Бичих"
+                required
+                class="p-2 border-0 rounded focus:outline-red-500 bg-slate-200 focus:outline-0 focus:ring-0 ring-0 outline-0 focus:border-0"
+              />
+            </div>
+            <div class="flex flex-col col-span-3 gap-1">
+              <label id="" class="font-bold text-slate-700">
+                Ачаа хүлээн авах газар
+              </label>
+              <input
+                type="text"
+                placeholder="Бичих"
+                required
+                class="p-2 border-0 rounded focus:outline-red-500 bg-slate-200 focus:outline-0 focus:ring-0 ring-0 outline-0 focus:border-0"
+              />
+            </div>
+            <div class="flex flex-col gap-1 col-span-full">
+              <label id="" class="font-bold text-slate-700">
+                Дэлгэрэнгүй мэдээлэл:
+              </label>
+              <textarea
+                placeholder="Бичих"
+                required
+                rows="{3}"
+                class="p-2 border-0 rounded focus:outline-red-500 bg-slate-200 focus:outline-0 focus:ring-0 ring-0 outline-0 focus:border-0"
+              ></textarea>
+            </div>
+
+            <div class="flex justify-end col-span-2 col-start-5">
+              <a
+                href="tel:+97670115028"
+                class="relative flex items-center gap-2 group h-12"
+              >
+                <div
+                  class="relative z-10 flex items-center px-8 py-2 text-white bg-red-500 group-hover:bg-sec-600 size-full rounded-xl"
+                >
+                  <div class="relative overflow-hidden">
+                    <span
+                      class="relative top-0 transition-all duration-300 group-hover:-top-10"
+                    >
+                      Илгээх
+                    </span>
+                    <span
+                      class="absolute duration-300 left-[50%] -translate-x-[50%] top-20 transition-all group-hover:top-[50%] -translate-y-[50%]"
+                    >
+                      Илгээх
+                    </span>
+                  </div>
+                </div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  version="1.1"
+                  width="44"
+                  height="44"
+                  class="absolute top-[50%] transition-all -translate-y-[50%] group-hover:scale-y-0 duration fill-red-500 right-8 flex items-center justify-center"
+                >
+                  <path
+                    d="M0 0 C10.02766385 0 11.78016344 0.0022601 18.375 6.25 C21.21594016 8.14396011 23.33275869 8.80093012 26.765625 8.671875 C30.69416391 7.4905661 33.34474692 4.58563598 36.21484375 1.75 C39 0 39 0 48 0 C48 14.52 48 29.04 48 44 C39.48205443 44 37.45308287 43.27134166 31.625 37.75 C28.78104578 35.85403052 26.66245567 35.19943986 23.2265625 35.328125 C19.34599355 36.4991037 16.77099216 39.40514781 13.98046875 42.25 C11 44 11 44 0 44 C0 29.48 0 14.96 0 0 Z "
+                  ></path>
+                </svg>
+                <div
+                  class="border-4 h-full group-hover:border-sec-600 border-red-500 aspect-[1/1] rounded-2xl relative bg-white grid place-items-center"
+                >
+                  <div class="relative overflow-hidden">
+                    <svg
+                      version="1.1"
+                      id="fi_271228"
+                      xmlns="http://www.w3.org/2000/svg"
+                      x="0px"
+                      y="0px"
+                      viewBox="0 0 492.004 492.004"
+                      class="w-4 h-4 absolute top-[50%] -translate-y-[50%] -left-[100%] group-hover:left-0 duration-300 transition-all fill-sec"
+                    >
+                      <g>
+                        <g>
+                          <path
+                            d="M382.678,226.804L163.73,7.86C158.666,2.792,151.906,0,144.698,0s-13.968,2.792-19.032,7.86l-16.124,16.12
+                        c-10.492,10.504-10.492,27.576,0,38.064L293.398,245.9l-184.06,184.06c-5.064,5.068-7.86,11.824-7.86,19.028
+                        c0,7.212,2.796,13.968,7.86,19.04l16.124,16.116c5.068,5.068,11.824,7.86,19.032,7.86s13.968-2.792,19.032-7.86L382.678,265
+                        c5.076-5.084,7.864-11.872,7.848-19.088C390.542,238.668,387.754,231.884,382.678,226.804z"
+                          ></path>
+                        </g>
+                      </g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                    </svg>
+                    <svg
+                      version="1.1"
+                      id="fi_271228"
+                      xmlns="http://www.w3.org/2000/svg"
+                      x="0px"
+                      y="0px"
+                      viewBox="0 0 492.004 492.004"
+                      class="w-4 h-4 group-hover:translate-x-10 duration-300 transition-all fill-red-500"
+                    >
+                      <g>
+                        <g>
+                          <path
+                            d="M382.678,226.804L163.73,7.86C158.666,2.792,151.906,0,144.698,0s-13.968,2.792-19.032,7.86l-16.124,16.12
+                        c-10.492,10.504-10.492,27.576,0,38.064L293.398,245.9l-184.06,184.06c-5.064,5.068-7.86,11.824-7.86,19.028
+                        c0,7.212,2.796,13.968,7.86,19.04l16.124,16.116c5.068,5.068,11.824,7.86,19.032,7.86s13.968-2.792,19.032-7.86L382.678,265
+                        c5.076-5.084,7.864-11.872,7.848-19.088C390.542,238.668,387.754,231.884,382.678,226.804z"
+                          ></path>
+                        </g>
+                      </g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                    </svg>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div
+      id="service-1"
+      tabindex="-1"
+      aria-hidden="true"
+      class="hidden overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full h-[calc(100%-1rem)] max-h-screen"
+    >
+      <div class="relative p-4 w-full max-w-2xl max-h-screen">
+        <!-- Modal content -->
+        <div class="relative bg-white rounded-lg shadow">
+          <!-- Modal header -->
+          <div
+            class="flex items-center justify-between p-4 md:p-5 border-b rounded-t"
+          >
+            <h3 class="text-xl font-semibold text-gray-900">title</h3>
+            <button
+              type="button"
+              class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center"
+              data-modal-hide="service-1"
+            >
+              <svg
+                class="w-3 h-3"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 14 14"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+                />
+              </svg>
+              <span class="sr-only">Close modal</span>
+            </button>
+          </div>
+          <!-- Modal body -->
+          <div class="p-4 md:p-5 space-y-4 overflow-y-scroll">
+            <p>
+              With less than a month to go before the European Union enacts new
+              consumer privacy laws for its citizens, companies around the world
+              are updating their terms of service agreements to comply. Lorem
+              ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, eos?
+              Ab commodi cumque voluptas in, nemo quas odio neque enim quisquam
+              vel fugiat hic cupiditate! Facere illum fugit optio vitae eveniet
+              dolores expedita cumque? Voluptate commodi architecto accusantium
+              rem nobis consequatur culpa explicabo, quisquam minima? Minus vero
+              fuga consectetur ex perspiciatis odit quo, voluptas molestiae
+              ullam dignissimos suscipit quidem possimus praesentium in expedita
+              facere corrupti illo, sit inventore! Modi placeat consequatur et
+              rem, culpa harum in doloribus quibusdam exercitationem corrupti
+              tempora aut iure dolorum molestiae velit fuga mollitia architecto
+              maxime nisi dolorem unde eum obcaecati repellendus quas. Esse
+              voluptas maiores deserunt culpa sed reprehenderit officia rerum
+              ducimus voluptatem dolorem, natus, voluptate iure molestiae
+              voluptates laudantium quaerat, eligendi tempore fugiat. Laudantium
+              minima facilis corrupti asperiores repudiandae omnis, dolorem et,
+              modi quo ducimus commodi perspiciatis nam voluptatum? Voluptas
+              praesentium cupiditate recusandae ab dignissimos dolores, velit
+              earum nostrum unde dolorum id porro aliquid voluptatum et rem
+              corporis omnis aliquam, quod expedita animi commodi neque. Facere
+              error nostrum veritatis ipsum delectus. Labore dolorem enim
+              laboriosam et facilis, harum deleniti doloremque ad eius magnam
+              iste id non, voluptatem placeat beatae natus accusantium culpa
+              odio fugiat, vero sapiente praesentium dolores at reiciendis?
+              Corrupti itaque reiciendis dolor?
+            </p>
+            <p>
+              The European Union’s General Data Protection Regulation (G.D.P.R.)
+              goes into effect on May 25 and is meant to ensure a common set of
+              data rights in the European Union. It requires organizations to
+              notify users as soon as possible of high-risk data breaches that
+              could personally affect them. Lorem ipsum dolor sit amet,
+              consectetur adipisicing elit. Iure amet similique delectus
+              quibusdam harum perferendis, voluptates esse, deleniti doloremque
+              dolore ipsam non? Accusantium minus atque harum debitis excepturi
+              incidunt, accusamus eius fuga nulla aliquid vel aspernatur unde
+              expedita laborum eos reprehenderit repellat odit nesciunt
+              voluptate praesentium iusto impedit cum delectus nobis. Vero
+              quibusdam consequuntur est cupiditate, modi praesentium laboriosam
+              ipsa provident fugit. Maiores repudiandae praesentium nulla
+              repellendus doloremque incidunt dolorem. Omnis minima dicta
+              eveniet provident amet aliquam eius ut deserunt, nemo, obcaecati
+              consequuntur quia odit! Mollitia, pariatur labore. Rerum, vero
+              sed, alias totam sit repellendus quasi eveniet quaerat corporis
+              ipsum nam earum obcaecati aliquid doloremque illo magnam? Sunt
+              animi culpa ipsum odio similique distinctio dolorum in ipsam
+              tenetur minus omnis veniam et quia velit, totam, iusto, nesciunt
+              delectus assumenda corrupti nisi repellat vero dignissimos eaque.
+              Quasi ut, voluptatibus placeat quisquam et minus cupiditate sequi
+              amet culpa delectus cum explicabo quo, qui impedit dicta
+              reiciendis eaque ab suscipit! Inventore illo eligendi sint dicta
+              iste ipsum vitae! Similique quo commodi ad. Dolor, repellat id.
+              Eligendi eveniet explicabo mollitia aspernatur odio similique
+              animi omnis, dicta dignissimos saepe repellat debitis fugiat at
+              assumenda magnam quo, obcaecati magni ad maiores asperiores culpa
+              aliquam deleniti cumque! Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Rem, at? Nemo tempore iusto cupiditate saepe
+              itaque laboriosam eos, vero ducimus eum odit consequatur sed
+              reiciendis neque nulla placeat quos voluptatum.
+            </p>
+          </div>
+          <!-- Modal footer -->
+          <div
+            class="flex items-center p-4 md:p-5 border-t border-gray-200 rounded-b"
+          >
+            <button
+              data-modal-hide="service-1"
+              type="button"
+              class="py-2.5 px-5"
+            >
+              Decline
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal-services"></div>
+
+    <footer id="footer"></footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+
+    <script src="main.js"></script>
+    <script src="data.js"></script>
+    <script>
+      const serviceContainer = document.getElementById("data-services");
+      serviceContainer.innerHTML = services
+        .map(
+          (el) => ` 
+              <button type="button" data-modal-target="service-${el.id}"
+              data-modal-toggle="service-${el.id}"
+            class="relative flex flex-col items-center w-full gap-2 px-3 py-10 overflow-hidden font-bold transition bg-white border backdrop-blur-sm duration group rounded-xl shadow-custom"
+          >
+            <span
+              class="absolute top-0 left-0 flex justify-end w-0 h-full transition-all duration-500 bg-sec group-hover:w-full"
+            ></span>
+            <img
+              src="${el.img}"
+              class="w-12 transition-all group-hover:-translate-y-2"
+              alt=""
+            />
+            <h1
+              class="relative text-lg transition text-slate-600 group-hover:text-white"
+            >
+              ${el.title}
+            </h1>
+            <p class="relative text-xs line-clamp-2 text-slate-400">
+              ${el.desc}
+            </p>
+          </button>
+          `
+        )
+        .join("");
+    </script>
+    <script>
+      const serviceModal = document.getElementById("modal-services");
+      serviceModal.innerHTML = services
+        .map(
+          (el) => ` 
+              <div
+      id="service-${el.id}"
+      tabindex="-1"
+      class="hidden overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full p-4 sm:p-6 lg:p-8"
+    >
+      <div
+        class="w-full pb-10 max-w-6xl max-h-full bg-white rounded-3xl shadow relative overflow-y-auto overflow-x-hidden space-y-4 sm:space-y-6 text-slate-700 text-base sm:text-lg font-normal"
+      >
+        <div
+          class="sticky px-10 top-0 w-full h-16 left-0 bg-white shadow-custom flex items-center justify-center"
+        >
+          <button
+            type="button"
+            class="bg-neutral-100 absolute right-10 top-[50%] -translate-y-[50%] w-8 h-8 inline-flex justify-center items-center"
+            data-modal-hide="service-${el.id}"
+          >
+            <svg
+              class="w-3 h-3"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 14 14"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+              />
+            </svg>
+            <span class="sr-only">Close modal</span>
+          </button>
+          <h1 class="text-center font-semibold text-xl">${el.title}</h1>
+        </div>
+        <div class="px-10 lg:px-20">
+          ${el.desc}
+        </div>
+      </div>
+    </div>
+          `
+        )
+        .join("");
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  </body>
+</html>

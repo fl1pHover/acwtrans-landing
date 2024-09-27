@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ACW Trans - International Freight Forwarding Company</title>
+
+    <link rel="stylesheet" href="/style.css" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            boxShadow: {
+              // "3xl": "0 0px 30px 0px rgba(0, 0, 0, 0.1)",
+              custom: "0 0px 30px rgba(0, 0, 0, 0.1)",
+
+              // '3xl': '0 35px 60px -15px rgba(0, 0, 0, 0.3)'
+            },
+            colors: {
+              background: "var(--background)",
+              foreground: "var(--foreground)",
+              sec: {
+                DEFAULT: "#13285a",
+                600: "#1A2D4E",
+              },
+              light: "#ecf0f3",
+              dark: "#0f1b24",
+            },
+            borderRadius: {
+              lg: "var(--radius)",
+              md: "calc(var(--radius) - 2px)",
+              sm: "calc(var(--radius) - 4px)",
+            },
+          },
+        },
+      };
+    </script>
+
+    <style type="text/tailwindcss">
+      @import url("https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+
+      /* :root {
+        --background: #ffffff;
+        --foreground: #171717;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --background: #0a0a0a;
+          --foreground: #ededed;
+        }
+      }
+
+      body {
+        color: var(--foreground);
+        background: var(--background);
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      @layer utilities {
+        .text-balance {
+          text-wrap: balance;
+        }
+      } */
+
+      @layer base {
+        body {
+          @apply bg-light text-sec-600;
+        }
+
+        .font-outline {
+          -webkit-text-stroke: 1px black;
+        }
+
+        .smooth {
+          transition: 0.5s ease, height 0.4s !important;
+        }
+
+        body {
+          font-family: "Nunito", sans-serif;
+          @apply text-slate-900;
+        }
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+          font-family: "Roboto", sans-serif;
+        }
+        .shadow-custom {
+          box-shadow: 0 0px 30px rgba(0, 0, 0, 1);
+        }
+
+        .text-w-border {
+          -webkit-text-stroke: 2px white; /* width and color */
+        }
+      }
+    </style>
+
+    <script></script>
+  </head>
+  <body>
+    <div class="flex flex-col">
+      <div class="mx-5 mb-2 text-sm text-white bg-sec rounded-b-xl">
+        <ul class="flex mx-auto max-w-7xl">
+          <li class="border-x border-slate-600">
+            <div
+              class="flex items-center gap-2 p-2 px-4 transition hover:text-sky-400 hover:-translate-x-1"
+            >
+              <svg
+                id="fi_3059457"
+                height="512"
+                viewBox="0 0 32 32"
+                width="512"
+                xmlns="http://www.w3.org/2000/svg"
+                class="fill-sky-400 h-4 w-4"
+              >
+                <path
+                  d="m30.035 22.594c-.053-.044-6.049-4.31-7.668-4.049-.781.138-1.227.671-2.122 1.737-.144.172-.491.583-.759.876a12.458 12.458 0 0 1 -1.651-.672 13.7 13.7 0 0 1 -6.321-6.321 12.458 12.458 0 0 1 -.672-1.651c.294-.269.706-.616.882-.764 1.061-.89 1.593-1.337 1.731-2.119.283-1.619-4.005-7.613-4.049-7.667a2.289 2.289 0 0 0 -1.706-.964c-1.738 0-6.7 6.436-6.7 7.521 0 .063.091 6.467 7.988 14.5 8.024 7.888 14.428 7.979 14.491 7.979 1.084 0 7.521-4.962 7.521-6.7a2.291 2.291 0 0 0 -.965-1.706zm-6.667 6.4c-.868-.074-6.248-.783-12.968-7.384-6.633-6.753-7.324-12.142-7.393-12.977a27.054 27.054 0 0 1 4.706-5.561c.04.04.093.1.161.178a35.391 35.391 0 0 1 3.574 6.063 11.886 11.886 0 0 1 -1.016.911 10.033 10.033 0 0 0 -1.512 1.422 1 1 0 0 0 -.171.751 11.418 11.418 0 0 0 .965 2.641 15.71 15.71 0 0 0 7.248 7.247 11.389 11.389 0 0 0 2.641.966.991.991 0 0 0 .751-.171 10.075 10.075 0 0 0 1.427-1.518c.314-.374.733-.873.892-1.014a35.146 35.146 0 0 1 6.076 3.578c.083.07.142.124.181.159a27.036 27.036 0 0 1 -5.562 4.707z"
+                ></path>
+                <path
+                  d="m23 15h2a8.009 8.009 0 0 0 -8-8v2a6.006 6.006 0 0 1 6 6z"
+                ></path>
+                <path
+                  d="m28 15h2a13.015 13.015 0 0 0 -13-13v2a11.013 11.013 0 0 1 11 11z"
+                ></path>
+              </svg>
+
+              <a href="">(+976) 7011-5028</a>
+            </div>
+          </li>
+          <li class="border-x border-slate-600">
+            <div
+              class="flex items-center gap-2 p-2 px-4 transition hover:text-sky-400 hover:-translate-x-1"
+            >
+              <svg
+                version="1.1"
+                id="fi_646094"
+                xmlns="http://www.w3.org/2000/svg"
+                x="0px"
+                y="0px"
+                viewBox="0 0 512 512"
+                class="fill-sky-400 h-4 w-4"
+              >
+                <g>
+                  <g>
+                    <path
+                      d="M467,76H45C20.137,76,0,96.262,0,121v270c0,24.885,20.285,45,45,45h422c24.655,0,45-20.03,45-45V121
+                  C512,96.306,491.943,76,467,76z M460.698,106c-9.194,9.145-167.415,166.533-172.878,171.967c-8.5,8.5-19.8,13.18-31.82,13.18
+                  s-23.32-4.681-31.848-13.208C220.478,274.284,64.003,118.634,51.302,106H460.698z M30,384.894V127.125L159.638,256.08L30,384.894z
+                   M51.321,406l129.587-128.763l22.059,21.943c14.166,14.166,33,21.967,53.033,21.967c20.033,0,38.867-7.801,53.005-21.939
+                  l22.087-21.971L460.679,406H51.321z M482,384.894L352.362,256.08L482,127.125V384.894z"
+                    ></path>
+                  </g>
+                </g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+              </svg>
+
+              <a href="">info@acwtrans.mn</a>
+            </div>
+          </li>
+          <li class="border-x border-slate-600">
+            <div
+              class="flex items-center gap-2 p-2 px-4 transition hover:text-sky-400 hover:-translate-x-1"
+            >
+              <svg
+                id="fi_3059457"
+                height="512"
+                viewBox="0 0 32 32"
+                width="512"
+                xmlns="http://www.w3.org/2000/svg"
+                class="fill-sky-400 h-4 w-4"
+              >
+                <path
+                  d="m30.035 22.594c-.053-.044-6.049-4.31-7.668-4.049-.781.138-1.227.671-2.122 1.737-.144.172-.491.583-.759.876a12.458 12.458 0 0 1 -1.651-.672 13.7 13.7 0 0 1 -6.321-6.321 12.458 12.458 0 0 1 -.672-1.651c.294-.269.706-.616.882-.764 1.061-.89 1.593-1.337 1.731-2.119.283-1.619-4.005-7.613-4.049-7.667a2.289 2.289 0 0 0 -1.706-.964c-1.738 0-6.7 6.436-6.7 7.521 0 .063.091 6.467 7.988 14.5 8.024 7.888 14.428 7.979 14.491 7.979 1.084 0 7.521-4.962 7.521-6.7a2.291 2.291 0 0 0 -.965-1.706zm-6.667 6.4c-.868-.074-6.248-.783-12.968-7.384-6.633-6.753-7.324-12.142-7.393-12.977a27.054 27.054 0 0 1 4.706-5.561c.04.04.093.1.161.178a35.391 35.391 0 0 1 3.574 6.063 11.886 11.886 0 0 1 -1.016.911 10.033 10.033 0 0 0 -1.512 1.422 1 1 0 0 0 -.171.751 11.418 11.418 0 0 0 .965 2.641 15.71 15.71 0 0 0 7.248 7.247 11.389 11.389 0 0 0 2.641.966.991.991 0 0 0 .751-.171 10.075 10.075 0 0 0 1.427-1.518c.314-.374.733-.873.892-1.014a35.146 35.146 0 0 1 6.076 3.578c.083.07.142.124.181.159a27.036 27.036 0 0 1 -5.562 4.707z"
+                ></path>
+                <path
+                  d="m23 15h2a8.009 8.009 0 0 0 -8-8v2a6.006 6.006 0 0 1 6 6z"
+                ></path>
+                <path
+                  d="m28 15h2a13.015 13.015 0 0 0 -13-13v2a11.013 11.013 0 0 1 11 11z"
+                ></path>
+              </svg>
+              <a href="">+976 9999 9999</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- <div
+      class={twMerge(
+        "sticky top-0 left-0 z-50 w-full h-full font-bold bg-light px-6",
+        scroll && "shadow-custom duration-500"
+      )}
+    > -->
+    <nav
+      id="nav"
+      class="sticky top-0 left-0 z-50 w-full h-full font-bold bg-light px-6 duration-500"
+    >
+      <div
+        class="grid items-center grid-cols-2 py-2 mx-auto lg:grid-cols-3 max-w-7xl"
+      >
+        <div class="items-center hidden gap-10 lg:flex">
+          <a
+            href="index.html"
+            class="py-4 transition text-sec hover:text-red-500 hover:translate-y-1"
+          >
+            Нүүр
+          </a>
+          <a
+            href="about.html"
+            class="py-4 transition text-sec hover:text-red-500 hover:translate-y-1"
+          >
+            Бидний тухай
+          </a>
+          <a
+            href="service.html"
+            class="py-4 transition text-sec hover:text-red-500 hover:translate-y-1"
+          >
+            Үйлчилгээ
+          </a>
+          <a
+            href="faq.html"
+            class="py-4 transition text-sec hover:text-red-500 hover:translate-y-1"
+          >
+            FAQ
+          </a>
+        </div>
+
+        <a href="/" class="flex justify-start lg:justify-center">
+          <img
+            src="https://acwtrans.mn/wp-content/uploads/2020/07/logo-tsagaan-border-2.png"
+            alt="logo"
+            class="max-w-64"
+          />
+        </a>
+        <div class="flex justify-end gap-2 mr-4">
+          <button
+            class="flex items-center gap-1 p-2 transition border-2 rounded-xl border-slate-300 bg-slate-100 hover:bg-slate-200 text-slate-600"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 100 100"
+              class="fill-sec w-5 h-5"
+              id="fi_2889312"
+            >
+              <g id="Layer_2" data-name="Layer 2">
+                <path
+                  d="M87.95636,73.23224a44.29242,44.29242,0,0,0,6.54358-23.23145L94.5,50l-.00006-.00079a44.2927,44.2927,0,0,0-6.54376-23.23169l-.02442-.03815a44.5022,44.5022,0,0,0-75.8634-.00031l-.02472.03864a44.51347,44.51347,0,0,0-.00018,46.46436l.02514.03918a44.50213,44.50213,0,0,0,75.86292-.00037Zm-32.26825,13.641a10.81448,10.81448,0,0,1-2.8894,1.99561,6.52134,6.52134,0,0,1-5.59748,0,13.62135,13.62135,0,0,1-5.04809-4.44233,39.77474,39.77474,0,0,1-5.74762-12.47064Q43.19588,71.538,50,71.53021q6.80127,0,13.59521.42572a50.19826,50.19826,0,0,1-2.438,6.71222A25.80323,25.80323,0,0,1,55.68811,86.87329ZM10.587,52.5H28.536a88.30459,88.30459,0,0,0,1.62274,14.91418q-7.35983.64766-14.68207,1.779A39.23059,39.23059,0,0,1,10.587,52.5Zm4.88964-21.69324Q22.796,31.941,30.16388,32.58618A88.15014,88.15014,0,0,0,28.5376,47.5H10.587A39.2306,39.2306,0,0,1,15.47662,30.80676ZM44.31183,13.12665a10.81146,10.81146,0,0,1,2.8894-1.99561,6.52134,6.52134,0,0,1,5.59748,0,13.62131,13.62131,0,0,1,5.04809,4.44232A39.77482,39.77482,0,0,1,63.59436,28.044Q56.804,28.46185,50,28.46973q-6.80127-.00009-13.59528-.42578a50.18985,50.18985,0,0,1,2.43805-6.71216A25.80254,25.80254,0,0,1,44.31183,13.12665ZM89.413,47.5H71.464a88.31173,88.31173,0,0,0-1.62274-14.91425q7.35992-.64764,14.68207-1.779A39.2306,39.2306,0,0,1,89.413,47.5ZM35.18756,67.02545A82.69645,82.69645,0,0,1,33.53729,52.5H66.4632a82.67828,82.67828,0,0,1-1.64728,14.52563Q57.41607,66.54,50,66.53027,42.58927,66.53018,35.18756,67.02545Zm29.62482-34.051A82.70224,82.70224,0,0,1,66.46259,47.5H33.53674A82.67914,82.67914,0,0,1,35.184,32.97424q7.39985.4855,14.816.49543Q57.41074,33.46967,64.81238,32.97449ZM71.46228,52.5H89.413a39.23052,39.23052,0,0,1-4.88971,16.69318q-7.31936-1.13435-14.68719-1.77942A88.14559,88.14559,0,0,0,71.46228,52.5ZM81.52539,26.20477q-6.39945.92331-12.83734,1.462a57.01792,57.01792,0,0,0-2.9754-8.39581,35.48007,35.48007,0,0,0-4.13984-7.04529A39.49152,39.49152,0,0,1,81.52539,26.20477ZM22.06915,22.06915a39.48682,39.48682,0,0,1,16.3559-9.84289c-.09369.12134-.19006.2373-.28241.36114A45.64338,45.64338,0,0,0,31.321,27.66754q-6.43816-.54528-12.84643-1.46277A39.82535,39.82535,0,0,1,22.06915,22.06915Zm-3.5946,51.726q6.39943-.9234,12.83728-1.462A57.01789,57.01789,0,0,0,34.28729,80.729a35.48425,35.48425,0,0,0,4.13983,7.04529A39.49154,39.49154,0,0,1,18.47455,73.79517Zm59.45624,4.13562a39.48587,39.48587,0,0,1-16.3559,9.84289c.09369-.12134.19-.2373.28241-.36114A45.64338,45.64338,0,0,0,68.679,72.3324q6.43816.54528,12.84643,1.46277A39.82535,39.82535,0,0,1,77.93079,77.93079Z"
+                ></path>
+              </g>
+            </svg>
+            MN
+          </button>
+          <!-- {/*
+          <a
+            href=""
+            class="flex items-center px-4 py-2 text-white transition bg-red-500 rounded-lg hover:bg-red-600"
+          >
+            Холбогдох
+          </a>
+          -->
+          <a
+            href="tel:+97670115028"
+            class="relative flex items-center gap-2 group h-11"
+          >
+            <div
+              class="relative z-10 flex items-center px-6 py-2 text-white bg-red-500 group-hover:bg-sec-600 font-semibold size-full rounded-xl"
+            >
+              <div class="relative overflow-hidden">
+                <span
+                  class="relative top-0 transition-all duration-300 group-hover:-top-10"
+                >
+                  Холбогдох
+                </span>
+                <span
+                  class="absolute duration-300 left-[50%] -translate-x-[50%] top-20 transition-all group-hover:top-[50%] -translate-y-[50%]"
+                >
+                  Холбогдох
+                </span>
+              </div>
+            </div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              version="1.1"
+              width="44"
+              height="44"
+              class="absolute top-[50%] transition-all -translate-y-[50%] group-hover:scale-y-0 duration fill-red-500 right-7 flex items-center justify-center"
+            >
+              <path
+                d="M0 0 C10.02766385 0 11.78016344 0.0022601 18.375 6.25 C21.21594016 8.14396011 23.33275869 8.80093012 26.765625 8.671875 C30.69416391 7.4905661 33.34474692 4.58563598 36.21484375 1.75 C39 0 39 0 48 0 C48 14.52 48 29.04 48 44 C39.48205443 44 37.45308287 43.27134166 31.625 37.75 C28.78104578 35.85403052 26.66245567 35.19943986 23.2265625 35.328125 C19.34599355 36.4991037 16.77099216 39.40514781 13.98046875 42.25 C11 44 11 44 0 44 C0 29.48 0 14.96 0 0 Z "
+              ></path>
+            </svg>
+            <div
+              class="border-4 h-full group-hover:border-sec-600 border-red-500 aspect-[1/1] rounded-2xl relative bg-light grid place-items-center"
+            >
+              <div class="relative overflow-hidden">
+                <svg
+                  id="fi_3059457"
+                  height="512"
+                  viewBox="0 0 32 32"
+                  width="512"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-5 h-5 group-hover:translate-x-10 duration-300 transition-all fill-red-500"
+                >
+                  <path
+                    d="m30.035 22.594c-.053-.044-6.049-4.31-7.668-4.049-.781.138-1.227.671-2.122 1.737-.144.172-.491.583-.759.876a12.458 12.458 0 0 1 -1.651-.672 13.7 13.7 0 0 1 -6.321-6.321 12.458 12.458 0 0 1 -.672-1.651c.294-.269.706-.616.882-.764 1.061-.89 1.593-1.337 1.731-2.119.283-1.619-4.005-7.613-4.049-7.667a2.289 2.289 0 0 0 -1.706-.964c-1.738 0-6.7 6.436-6.7 7.521 0 .063.091 6.467 7.988 14.5 8.024 7.888 14.428 7.979 14.491 7.979 1.084 0 7.521-4.962 7.521-6.7a2.291 2.291 0 0 0 -.965-1.706zm-6.667 6.4c-.868-.074-6.248-.783-12.968-7.384-6.633-6.753-7.324-12.142-7.393-12.977a27.054 27.054 0 0 1 4.706-5.561c.04.04.093.1.161.178a35.391 35.391 0 0 1 3.574 6.063 11.886 11.886 0 0 1 -1.016.911 10.033 10.033 0 0 0 -1.512 1.422 1 1 0 0 0 -.171.751 11.418 11.418 0 0 0 .965 2.641 15.71 15.71 0 0 0 7.248 7.247 11.389 11.389 0 0 0 2.641.966.991.991 0 0 0 .751-.171 10.075 10.075 0 0 0 1.427-1.518c.314-.374.733-.873.892-1.014a35.146 35.146 0 0 1 6.076 3.578c.083.07.142.124.181.159a27.036 27.036 0 0 1 -5.562 4.707z"
+                  ></path>
+                  <path
+                    d="m23 15h2a8.009 8.009 0 0 0 -8-8v2a6.006 6.006 0 0 1 6 6z"
+                  ></path>
+                  <path
+                    d="m28 15h2a13.015 13.015 0 0 0 -13-13v2a11.013 11.013 0 0 1 11 11z"
+                  ></path>
+                </svg>
+                <svg
+                  id="fi_3059457"
+                  height="512"
+                  viewBox="0 0 32 32"
+                  width="512"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-5 h-5 absolute top-[50%] -translate-y-[50%] -left-[100%] group-hover:left-0 duration-300 transition-all fill-sec"
+                >
+                  <path
+                    d="m30.035 22.594c-.053-.044-6.049-4.31-7.668-4.049-.781.138-1.227.671-2.122 1.737-.144.172-.491.583-.759.876a12.458 12.458 0 0 1 -1.651-.672 13.7 13.7 0 0 1 -6.321-6.321 12.458 12.458 0 0 1 -.672-1.651c.294-.269.706-.616.882-.764 1.061-.89 1.593-1.337 1.731-2.119.283-1.619-4.005-7.613-4.049-7.667a2.289 2.289 0 0 0 -1.706-.964c-1.738 0-6.7 6.436-6.7 7.521 0 .063.091 6.467 7.988 14.5 8.024 7.888 14.428 7.979 14.491 7.979 1.084 0 7.521-4.962 7.521-6.7a2.291 2.291 0 0 0 -.965-1.706zm-6.667 6.4c-.868-.074-6.248-.783-12.968-7.384-6.633-6.753-7.324-12.142-7.393-12.977a27.054 27.054 0 0 1 4.706-5.561c.04.04.093.1.161.178a35.391 35.391 0 0 1 3.574 6.063 11.886 11.886 0 0 1 -1.016.911 10.033 10.033 0 0 0 -1.512 1.422 1 1 0 0 0 -.171.751 11.418 11.418 0 0 0 .965 2.641 15.71 15.71 0 0 0 7.248 7.247 11.389 11.389 0 0 0 2.641.966.991.991 0 0 0 .751-.171 10.075 10.075 0 0 0 1.427-1.518c.314-.374.733-.873.892-1.014a35.146 35.146 0 0 1 6.076 3.578c.083.07.142.124.181.159a27.036 27.036 0 0 1 -5.562 4.707z"
+                  ></path>
+                  <path
+                    d="m23 15h2a8.009 8.009 0 0 0 -8-8v2a6.006 6.006 0 0 1 6 6z"
+                  ></path>
+                  <path
+                    d="m28 15h2a13.015 13.015 0 0 0 -13-13v2a11.013 11.013 0 0 1 11 11z"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <section class="m-5 mt-3 relative aspect-[3/1] rounded-3xl overflow-hidden">
+      <div
+        class="absolute top-0 left-0 z-10 flex items-center justify-center size-full"
+        style="background: rgba(246, 36, 89, 0.2)"
+      >
+        <h1 class="relative z-20 text-6xl font-extrabold text-white">
+          Бидний тухай
+        </h1>
+      </div>
+
+      <img
+        src="./assets/images/about-bg.jpg"
+        alt="image"
+        class="object-cover size-full"
+      />
+    </section>
+
+    <!-- About -->
+    <section class="mx-auto max-w-7xl">
+      <div class="relative z-10 grid grid-cols-3 gap-6 mx-auto mb-20 -mt-10">
+        <div
+          class="flex flex-col items-center p-6 text-center bg-white rounded-xl"
+          style="box-shadow: 0 0 30px rgba(0, 0, 0, 0.1)"
+        >
+          <div class="p-2 bg-red-600 rounded-full">
+            <svg
+              id="fi_2174475"
+              height="512"
+              viewBox="0 0 48 48"
+              width="512"
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-10 h-10 rounded-full fill-white"
+            >
+              <path
+                d="m.911 40.525h37.447v-21.434h-37.447zm3.445-15.4a3.007 3.007 0 0 0 3.007-3.008h24.542a3.008 3.008 0 0 0 3.008 3.008v9.358a3.008 3.008 0 0 0 -3.008 3.008h-24.542a3.007 3.007 0 0 0 -3.007-3.008z"
+              ></path>
+              <circle cx="19.634" cy="29.808" r="4.512"></circle>
+              <path d="m2.878 17.59h36.983v17.3l3.02-.32-2.24-21.31z"></path>
+              <path
+                d="m42.871 7.49-37.964 8.014 37.064-3.894 1.86 17.68 3.08-.74z"
+              ></path>
+            </svg>
+          </div>
+          <h1 class="mt-1 text-xl font-bold text-red-600">Хямд үнэ</h1>
+          <p class="mt-3 text-sm font-medium text-slate-500">
+            Манай компани нь үйлчлүүлэгчидээ үргэлж бусдаас хямд үнэ санал
+            болгодог
+          </p>
+        </div>
+        <div
+          class="flex flex-col items-center p-6 text-center bg-white rounded-xl"
+          style="box-shadow: 0 0 30px rgba(0, 0, 0, 0.1)"
+        >
+          <div class="p-2 bg-red-600 rounded-full">
+            <svg
+              class="w-10 h-10 rounded-full fill-white"
+              id="fi_8201111"
+              enableBackground="new 0 0 512 512"
+              viewBox="0 0 512 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g>
+                <path
+                  d="m172 276c11.046 0 20-8.954 20-20s-8.954-20-20-20h-72c-11.046 0-20 8.954-20 20s8.954 20 20 20z"
+                ></path>
+                <path
+                  d="m332 76h-312c-11.046 0-20 8.954-20 20s8.954 20 20 20h199.656c-14.006 11.4-26.328 24.893-36.461 40h-123.195c-11.046 0-20 8.954-20 20s8.954 20 20 20h134.266c7.123 0 13.708-3.788 17.289-9.945 25.511-43.866 70.538-70.055 120.445-70.055 77.196 0 140 62.804 140 140s-62.804 140-140 140c-49.91 0-94.937-26.188-120.445-70.054-3.581-6.157-10.166-9.946-17.289-9.946h-134.266c-11.046 0-20 8.954-20 20s8.954 20 20 20h123.195c10.132 15.107 22.453 28.6 36.458 40h-199.653c-11.046 0-20 8.954-20 20s8.954 20 20 20h312c99.252 0 180-80.748 180-180s-80.748-180-180-180z"
+                ></path>
+                <path
+                  d="m306.143 310.142 40-40c3.75-3.75 5.857-8.838 5.857-14.142v-80c0-11.046-8.954-20-20-20s-20 8.954-20 20v71.716l-34.143 34.142c-7.81 7.811-7.81 20.474 0 28.284 7.811 7.811 20.475 7.811 28.286 0z"
+                ></path>
+              </g>
+            </svg>
+          </div>
+          <h1 class="mt-1 text-xl font-bold text-red-600">Хурдан</h1>
+          <p class="mt-3 text-sm font-medium text-slate-500">
+            Бидний үйлчилгээг секундээр хэмж
+          </p>
+        </div>
+        <div
+          class="flex flex-col items-center p-6 text-center bg-white rounded-xl"
+          style="box-shadow: 0 0 30px rgba(0, 0, 0, 0.1)"
+        >
+          <div class="p-2 bg-red-600 rounded-full">
+            <svg
+              class="w-10 h-10 rounded-full fill-white"
+              id="fi_15550181"
+              viewBox="0 0 512 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="m124.511 146.714v141.962c0 12.81 2.799 23.249 9.087 33.846 20.212 34.015 81.821 71.382 122.404 95.312 40.578-23.93 102.198-61.297 122.399-95.312 6.289-10.597 9.087-21.036 9.087-33.846v-141.962c-49.238-14.954-93.401-32.763-131.487-53.034-38.091 20.271-82.254 38.08-131.492 53.034zm215.711 41.833c8.186 8.187 8.186 21.583 0 29.769l-105.484 105.485c-4.328 4.329-9.894 6.218-15.963 5.419-6.07-.799-10.956-4.063-14.017-9.365l-36.318-62.905c-5.789-10.026-2.322-22.966 7.705-28.754 10.026-5.789 22.965-2.322 28.754 7.704l21.303 36.899 84.25-84.251c8.187-8.186 21.582-8.186 29.769 0zm-84.222-162.547c-66.454 41.49-146.915 65.13-190.169 76.168v186.499c0 23.079 5.534 43.964 17.323 63.813 32.296 54.38 112.757 97.192 172.846 133.52 60.089-36.328 140.55-79.139 172.846-133.52 11.788-19.849 17.323-40.735 17.323-63.813v-186.499c-43.254-11.038-123.715-34.678-190.169-76.168zm156.491 262.676c0 17.319-4.002 32.135-12.598 46.608-24.563 41.37-92.561 81.362-137.553 107.831-1.959 1.146-4.15 1.716-6.336 1.716s-4.382-.57-6.341-1.716c-44.992-26.469-112.98-66.461-137.553-107.831-8.596-14.473-12.599-29.289-12.599-46.608v-151.276c0-5.549 3.659-10.433 8.982-11.991 53.779-15.761 101.39-34.902 141.498-56.894 3.738-2.054 8.285-2.054 12.023 0 40.108 21.992 87.719 41.132 141.498 56.894 5.322 1.558 8.981 6.442 8.981 11.991v151.276z"
+                fillRule="evenodd"
+              ></path>
+            </svg>
+          </div>
+          <h1 class="mt-1 text-xl font-bold text-red-600">Баталгаатай</h1>
+          <p class="mt-3 text-sm font-medium text-slate-500">
+            Тээвэрлэлтийн баталгаагаар таны сэтгэл ханамжийг бид тогтооно.
+          </p>
+        </div>
+      </div>
+      <div class="grid items-center w-full grid-cols-2 gap-32">
+        <div class="relative w-full">
+          <img
+            src="./assets/images/about-bg.jpg"
+            alt="image"
+            width="{400}"
+            height="{400}"
+            class="object-cover aspect-[1/1] w-full overflow-hidden rounded-3xl"
+          />
+          <img
+            src="./assets/images/about-bg.jpg"
+            alt="image"
+            width="{400}"
+            height="{400}"
+            class="absolute top-20 -right-10 object-cover aspect-[1/1] w-1/2 ring-8 ring-white ring-r-0 overflow-hidden rounded-2xl"
+          />
+          <div
+            class="absolute bg-red-600 -right-10 -bottom-16 aspect-[5/4] w-1/2 flex flex-col items-center justify-center ring-8 text-center text-white ring-red-600 ring-r-0 overflow-hidden rounded-xl"
+          >
+            <IconLeadership class={"w-16 h-16 fill-white"} />
+            <h1 class="mt-6 mb-2 text-5xl font-bold text-white">20+</h1>
+            <p class="font-semibold">Жилийн туршлага</p>
+          </div>
+        </div>
+        <div class="flex flex-col">
+          <span class="text-xs font-bold text-red-500 uppercase">
+            // Бид хэн бэ
+          </span>
+          <h1 class="mt-2 mb-10 text-5xl font-semibold">Бидний тухай</h1>
+          <p class="text-sm font-medium leading-7">
+            “Эй Си Даблью Транс” ХХК нь 2000онд анх байгуулагдсан бөгөөд тээвэр
+            зуучлалын салбарт үйл ажиллагаагаа тогтвор суурьшилтай эрхлэж байгаа
+            шилдэг компаниудын нэг юм.
+            <br />
+            Манай компани нь Монголын Тээвэр Зуучлагчдын Нэгдсэн Холбооны
+            удирдах зөвлөлийн гишүүн, Үндэсний Тээврийн Корпорацийн удирдах
+            зөвлөлийн гишүүн, Худалдаа аж үйлдвэрийн танхимын АЛТАН гишүүн
+            бөгөөд бүх үйл ажиллагаагаа{" "}
+            <span class="font-semibold text-red-600">
+              олон улсын стандартын дагуу
+            </span>
+            {" "} үзүүлдэг. Компанийн тээвэр зуучлалын үйлчилгээг цогцоор үзүүлж
+            ирсэн туршлагатай, тус салбарт он удаан жил ажиллаж ирсэн чадварлаг
+            боловсон хүчнүүд таны хүссэн бараа бүтээгдэхүүнийг{" "}
+            <span class="font-semibold text-red-600">
+              хурдан, шуурхай найдвартай тээвэрлэж, шаардлагатай мэдээ,
+              мэдээллээр хангаж ажиллах
+            </span>
+            {" "} болно. Харилцагч, үйлчлүүлэгчидийнхээ сэтгэл ханамжийгэн
+            түрүүнд эрхэмлэдэг манай компани дэлхийн бүх боомт, өртөөнүүдэд
+            байрлах агентуудтай нягт хамтран ажилладаг тул таны ачааг хүссэн
+            газар бүрээс тань тээвэрлэж, чухал шаардлагатай бусад тээврийн
+            үйлчилгээг цогцоор нь үзүүлэх болно.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div class="h-40"></div>
+
+    <!-- Vison -->
+    <section class="mx-auto mb-20 max-w-7xl">
+      <div class="grid items-center w-full grid-cols-2 gap-32">
+        <div class="flex flex-col">
+          <span class="text-xs font-bold text-red-500 uppercase">
+            // Алсын хараа
+          </span>
+          <h1 class="mt-2 mb-10 text-5xl font-semibold">Эрхэм зорилго</h1>
+          <div>
+            <p class="flex items-start text-sm leading-7 text-slate-700">
+              <img
+                src="./assets/icons/check.png"
+                alt=""
+                class="w-5 h-5 m-1 mr-2"
+              />
+              Хэрэглэгч үйлчлүүлэгчидийнхээ итгэлийг өөрийн хамт олон болон
+              бизнесийн түншүүдийнхээ нэгдмэл өргөн цар хүрээтэй хамтын үйл
+              ажиллагаа, цаг үедээ зохицон хөгжих
+            </p>
+            <p class="flex items-start text-sm leading-7 text-slate-700">
+              <img
+                src="./assets/icons/check.png"
+                alt=""
+                class="w-5 h-5 m-1 mr-2"
+              />
+              Мэдлэг боловсролын дэвшил болон түүнд зохицох ур дүйг хөгжүүлэн,
+              ажиллагсдынхаа ажлын болон амьдралын таатай орчинг бүрдүүлэх
+            </p>
+            <p class="flex items-start text-sm leading-7 text-slate-700">
+              <img
+                src="./assets/icons/check.png"
+                alt=""
+                class="w-5 h-5 m-1 mr-2"
+              />
+              Тээвэр логистикийн салбартаа голлох үүрэг гүйцэтгэгч байж
+              харилцагчид болон улс эх орны хөгжилд бодитой хувь нэмрээ оруулан
+              нийгмийн хариуцлагаа ухамсарлаж ажиллана.
+            </p>
+          </div>
+        </div>
+        <div class="relative w-full">
+          <image
+            src="./assets/images/mission.jpg"
+            alt="image"
+            class="object-cover aspect-[4/3] w-full overflow-hidden rounded-3xl"
+          />
+        </div>
+      </div>
+    </section>
+
+    <footer id="footer"></footer>
+
+    <script src="main.js"></script>
+    <script src="data.js"></script>
+  </body>
+</html>

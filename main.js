@@ -10,34 +10,51 @@ window.addEventListener("scroll", function () {
 });
 
 const navHTML = `
- <div
-        class="grid items-center grid-cols-2 py-2 mx-auto lg:grid-cols-3 max-w-7xl"
+<div
+        class="grid items-center grid-cols-2 mx-auto lg:grid-cols-3 max-w-7xl"
       >
         <div class="items-center hidden gap-10 lg:flex">
           <a
             href="index.html"
-            class="py-4 transition text-sec hover:text-red-500 hover:translate-y-1"
+            class="py-8 transition text-sec hover:text-red-500 hover:translate-y-1"
           >
             Нүүр
           </a>
           <a
             href="about.html"
-            class="py-4 transition text-sec hover:text-red-500 hover:translate-y-1"
+            class="py-8 transition text-sec hover:text-red-500 hover:translate-y-1"
           >
             Бидний тухай
           </a>
-          <a
-            href="service.html"
-            class="py-4 transition text-sec hover:text-red-500 hover:translate-y-1"
+          <div
+            class="relative group py-8 transition text-sec hover:text-red-500 hover:translate-y-1"
           >
-            Үйлчилгээ
-          </a>
-          <a
+            <a href="service.html" class="">Танд хэрэгтэй</a>
+            <div
+              class="absolute hidden group-hover:flex top-20 left-0 bg-white border-t-2 border-rose-500"
+            >
+              <div class="text-slate-500 flex flex-col py-2">
+                <a
+                  href="index.html#faq"
+                  class="w-40 px-4 py-2 hover:text-rose-500"
+                >
+                  FAQ
+                </a>
+                <a href="faq.html" class="w-40 px-4 py-2 hover:text-rose-500">
+                  Контейнер
+                </a>
+                <a href="faq.html" class="w-40 px-4 py-2 hover:text-rose-500">
+                  Инкотерм
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- <a
             href="faq.html"
-            class="py-4 transition text-sec hover:text-red-500 hover:translate-y-1"
+            class="py-8 transition text-sec hover:text-red-500 hover:translate-y-1 relative group"
           >
             FAQ
-          </a>
+          </a> -->
         </div>
 
         <a href="/" class="flex justify-start lg:justify-center">
@@ -49,7 +66,7 @@ const navHTML = `
         </a>
         <div class="flex justify-end gap-2 mr-4">
           <button
-            class="flex items-center gap-1 p-2 transition border-2 rounded-xl border-slate-300 bg-slate-100 hover:bg-slate-200 text-slate-600"
+            class="flex items-center gap-1 p-2 transition border-2 rounded-xl border-slate-300 hover:bg-slate-200 text-slate-600"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -67,7 +84,7 @@ const navHTML = `
           </button>
 
           <a
-            href="tel:+97670115028"
+            href="contact.html"
             class="relative flex items-center gap-2 group h-11"
           >
             <div
@@ -97,45 +114,80 @@ const navHTML = `
                 d="M0 0 C10.02766385 0 11.78016344 0.0022601 18.375 6.25 C21.21594016 8.14396011 23.33275869 8.80093012 26.765625 8.671875 C30.69416391 7.4905661 33.34474692 4.58563598 36.21484375 1.75 C39 0 39 0 48 0 C48 14.52 48 29.04 48 44 C39.48205443 44 37.45308287 43.27134166 31.625 37.75 C28.78104578 35.85403052 26.66245567 35.19943986 23.2265625 35.328125 C19.34599355 36.4991037 16.77099216 39.40514781 13.98046875 42.25 C11 44 11 44 0 44 C0 29.48 0 14.96 0 0 Z "
               ></path>
             </svg>
+
             <div
-              class="border-4 h-full group-hover:border-sec-600 border-red-500 aspect-[1/1] rounded-2xl relative bg-light grid place-items-center"
+              class="border-4 h-full group-hover:border-sec-600 border-red-500 aspect-[1/1] rounded-2xl relative bg-white grid place-items-center"
             >
               <div class="relative overflow-hidden">
                 <svg
-                  id="fi_3059457"
-                  height="512"
-                  viewBox="0 0 32 32"
-                  width="512"
+                  version="1.1"
+                  id="fi_271228"
                   xmlns="http://www.w3.org/2000/svg"
-                  class="w-5 h-5 group-hover:translate-x-10 duration-300 transition-all fill-red-500"
+                  x="0px"
+                  y="0px"
+                  viewBox="0 0 492.004 492.004"
+                  class="w-4 h-4 absolute top-[50%] -translate-y-[50%] -left-[100%] group-hover:left-0 duration-300 transition-all fill-sec"
                 >
-                  <path
-                    d="m30.035 22.594c-.053-.044-6.049-4.31-7.668-4.049-.781.138-1.227.671-2.122 1.737-.144.172-.491.583-.759.876a12.458 12.458 0 0 1 -1.651-.672 13.7 13.7 0 0 1 -6.321-6.321 12.458 12.458 0 0 1 -.672-1.651c.294-.269.706-.616.882-.764 1.061-.89 1.593-1.337 1.731-2.119.283-1.619-4.005-7.613-4.049-7.667a2.289 2.289 0 0 0 -1.706-.964c-1.738 0-6.7 6.436-6.7 7.521 0 .063.091 6.467 7.988 14.5 8.024 7.888 14.428 7.979 14.491 7.979 1.084 0 7.521-4.962 7.521-6.7a2.291 2.291 0 0 0 -.965-1.706zm-6.667 6.4c-.868-.074-6.248-.783-12.968-7.384-6.633-6.753-7.324-12.142-7.393-12.977a27.054 27.054 0 0 1 4.706-5.561c.04.04.093.1.161.178a35.391 35.391 0 0 1 3.574 6.063 11.886 11.886 0 0 1 -1.016.911 10.033 10.033 0 0 0 -1.512 1.422 1 1 0 0 0 -.171.751 11.418 11.418 0 0 0 .965 2.641 15.71 15.71 0 0 0 7.248 7.247 11.389 11.389 0 0 0 2.641.966.991.991 0 0 0 .751-.171 10.075 10.075 0 0 0 1.427-1.518c.314-.374.733-.873.892-1.014a35.146 35.146 0 0 1 6.076 3.578c.083.07.142.124.181.159a27.036 27.036 0 0 1 -5.562 4.707z"
-                  ></path>
-                  <path
-                    d="m23 15h2a8.009 8.009 0 0 0 -8-8v2a6.006 6.006 0 0 1 6 6z"
-                  ></path>
-                  <path
-                    d="m28 15h2a13.015 13.015 0 0 0 -13-13v2a11.013 11.013 0 0 1 11 11z"
-                  ></path>
+                  <g>
+                    <g>
+                      <path
+                        d="M382.678,226.804L163.73,7.86C158.666,2.792,151.906,0,144.698,0s-13.968,2.792-19.032,7.86l-16.124,16.12
+                  c-10.492,10.504-10.492,27.576,0,38.064L293.398,245.9l-184.06,184.06c-5.064,5.068-7.86,11.824-7.86,19.028
+                  c0,7.212,2.796,13.968,7.86,19.04l16.124,16.116c5.068,5.068,11.824,7.86,19.032,7.86s13.968-2.792,19.032-7.86L382.678,265
+                  c5.076-5.084,7.864-11.872,7.848-19.088C390.542,238.668,387.754,231.884,382.678,226.804z"
+                      ></path>
+                    </g>
+                  </g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
                 </svg>
                 <svg
-                  id="fi_3059457"
-                  height="512"
-                  viewBox="0 0 32 32"
-                  width="512"
+                  version="1.1"
+                  id="fi_271228"
                   xmlns="http://www.w3.org/2000/svg"
-                  class="w-5 h-5 absolute top-[50%] -translate-y-[50%] -left-[100%] group-hover:left-0 duration-300 transition-all fill-sec"
+                  x="0px"
+                  y="0px"
+                  viewBox="0 0 492.004 492.004"
+                  class="w-4 h-4 group-hover:translate-x-10 duration-300 transition-all fill-red-500"
                 >
-                  <path
-                    d="m30.035 22.594c-.053-.044-6.049-4.31-7.668-4.049-.781.138-1.227.671-2.122 1.737-.144.172-.491.583-.759.876a12.458 12.458 0 0 1 -1.651-.672 13.7 13.7 0 0 1 -6.321-6.321 12.458 12.458 0 0 1 -.672-1.651c.294-.269.706-.616.882-.764 1.061-.89 1.593-1.337 1.731-2.119.283-1.619-4.005-7.613-4.049-7.667a2.289 2.289 0 0 0 -1.706-.964c-1.738 0-6.7 6.436-6.7 7.521 0 .063.091 6.467 7.988 14.5 8.024 7.888 14.428 7.979 14.491 7.979 1.084 0 7.521-4.962 7.521-6.7a2.291 2.291 0 0 0 -.965-1.706zm-6.667 6.4c-.868-.074-6.248-.783-12.968-7.384-6.633-6.753-7.324-12.142-7.393-12.977a27.054 27.054 0 0 1 4.706-5.561c.04.04.093.1.161.178a35.391 35.391 0 0 1 3.574 6.063 11.886 11.886 0 0 1 -1.016.911 10.033 10.033 0 0 0 -1.512 1.422 1 1 0 0 0 -.171.751 11.418 11.418 0 0 0 .965 2.641 15.71 15.71 0 0 0 7.248 7.247 11.389 11.389 0 0 0 2.641.966.991.991 0 0 0 .751-.171 10.075 10.075 0 0 0 1.427-1.518c.314-.374.733-.873.892-1.014a35.146 35.146 0 0 1 6.076 3.578c.083.07.142.124.181.159a27.036 27.036 0 0 1 -5.562 4.707z"
-                  ></path>
-                  <path
-                    d="m23 15h2a8.009 8.009 0 0 0 -8-8v2a6.006 6.006 0 0 1 6 6z"
-                  ></path>
-                  <path
-                    d="m28 15h2a13.015 13.015 0 0 0 -13-13v2a11.013 11.013 0 0 1 11 11z"
-                  ></path>
+                  <g>
+                    <g>
+                      <path
+                        d="M382.678,226.804L163.73,7.86C158.666,2.792,151.906,0,144.698,0s-13.968,2.792-19.032,7.86l-16.124,16.12
+                  c-10.492,10.504-10.492,27.576,0,38.064L293.398,245.9l-184.06,184.06c-5.064,5.068-7.86,11.824-7.86,19.028
+                  c0,7.212,2.796,13.968,7.86,19.04l16.124,16.116c5.068,5.068,11.824,7.86,19.032,7.86s13.968-2.792,19.032-7.86L382.678,265
+                  c5.076-5.084,7.864-11.872,7.848-19.088C390.542,238.668,387.754,231.884,382.678,226.804z"
+                      ></path>
+                    </g>
+                  </g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
                 </svg>
               </div>
             </div>
@@ -405,5 +457,5 @@ const footerHTML = `
     </div>
 `;
 
-// document.getElementById("nav").innerHTML += navHTML;
+document.getElementById("nav").innerHTML += navHTML;
 document.getElementById("footer").innerHTML += footerHTML;

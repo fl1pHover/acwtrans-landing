@@ -109,7 +109,7 @@
 
     <nav
       id="nav"
-      class="sticky py-4 lg:py-0 top-0 left-0 z-30 w-full h-full font-bold bg-light px-6 duration-500"
+      class="sticky py-4 lg:py-0 top-0 left-0 z-30 w-full h-full font-bold bg-light px-4 duration-500"
     ></nav>
 
     <div id="drawer"></div>
@@ -118,7 +118,7 @@
       class="m-3 sm:m-5 mt-3 relative h-[40vh] md:h-auto aspect-auto md:aspect-[3/1] rounded-3xl overflow-hidden"
     >
       <div
-        class="absolute top-0 left-0 z-10 flex items-center flex-col justify-center size-full bg-slate-900/60 gap-2"
+        class="absolute top-0 left-0 z-10 flex items-center flex-col justify-center size-full bg-slate-900/60 gap-2 backdrop-blur-sm"
       >
         <h1
           class="relative z-20 text-2xl sm:text-4xl lg:text-6xl font-extrabold text-white"
@@ -190,7 +190,7 @@
           id="accordion-flush"
           class="w-full"
           data-accordion="collapse"
-          data-active-classes="font-bold"
+          data-active-classes="font-bold text-rose-500"
           data-inactive-classes="text-slate-600"
         ></div>
       </div>
@@ -216,7 +216,7 @@
                 <h2 id="accordion-flush-heading-${el.id}">
                   <button
                     type="button"
-                    class="flex items-center justify-between w-full py-3 font-medium text-slate-500 gap-3 text-left"
+                    class="flex items-center justify-between w-full py-3 font-medium gap-3 text-left"
                     data-accordion-target="#accordion-flush-body-${el.id}"
                     aria-expanded="true"
                     aria-controls="accordion-flush-body-${el.id}"
@@ -246,7 +246,7 @@
                   aria-labelledby="accordion-flush-heading-${el.id}"
                   
                 >
-                  <div class="text-xs text-slate-500 tracking-wider">
+                  <div class="text-xs tracking-wider">
                    ${el.desc}
                   </div>
                 </div>

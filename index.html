@@ -39,6 +39,21 @@
       };
     </script>
 
+    <!-- slick carousel -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
+      integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"
+      integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+      crossorigin="anonymous"
+    />
+
     <style type="text/tailwindcss">
       @import url("https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
       @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
@@ -180,7 +195,7 @@
 
     <nav
       id="nav"
-      class="sticky py-4 lg:py-0 top-0 left-0 z-30 w-full h-full font-bold bg-light px-6 duration-500"
+      class="sticky py-4 lg:py-0 top-0 left-0 z-30 w-full h-full font-bold bg-light px-4 duration-500"
     ></nav>
 
     <div id="drawer"></div>
@@ -494,8 +509,8 @@
             </div>
 
             <div class="flex justify-end col-span-2 col-start-5">
-              <a
-                href="tel:+97670115028"
+              <button
+                type="submit"
                 class="relative flex items-center gap-2 group h-12"
               >
                 <div
@@ -601,7 +616,7 @@
                     </svg>
                   </div>
                 </div>
-              </a>
+              </button>
             </div>
           </div>
         </form>
@@ -636,11 +651,84 @@
         ></div>
       </div>
     </div>
+
+    <!-- <section class="max-w-7xl px-4 mx-auto">
+      <h1>Хамтрагч байгууллагууд</h1>
+      <div class="w-full">
+        <div id="slick-container">
+          <img src="./assets/images/neptune.png" class="w-32" alt="" />
+          <img src="./assets/images/neptune.png" class="w-32" alt="" />
+          <img src="./assets/images/neptune.png" class="w-32" alt="" />
+          <img src="./assets/images/neptune.png" class="w-32" alt="" />
+        </div>
+      </div>
+    </section> -->
     <!-- Modals -->
     <div id="modal-services"></div>
 
     <!-- Footer -->
     <footer id="footer"></footer>
+
+    <!-- Slick Carousel -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.5.2/jquery-migrate.min.js"
+      integrity="sha512-BzvgYEoHXuphX+g7B/laemJGYFdrq4fTKEo+B3PurSxstMZtwu28FHkPKXu6dSBCzbUWqz/rMv755nUwhjQypw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+      integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $("#slick-container").slick({
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          draggable: true,
+          autoplay: true,
+          autoplaySpeed: 2000,
+          infinite: false,
+          arrows: true,
+          dots: true,
+          zIndex: 0,
+          responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                dots: true,
+              },
+            },
+            {
+              breakpoint: 732,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+              },
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: false,
+              },
+            },
+          ],
+        });
+      });
+    </script>
 
     <!-- Flowbite CDN -->
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
@@ -657,7 +745,7 @@
           (el) => ` 
               <button type="button" data-modal-target="service-${el.id}"
               data-modal-toggle="service-${el.id}"
-            class="relative flex flex-col items-center w-full gap-2 px-3 py-10 overflow-hidden font-bold transition bg-white border backdrop-blur-sm duration group rounded-xl shadow-custom"
+            class="relative flex flex-col items-center w-full gap-2 px-5 py-10 overflow-hidden font-bold transition bg-white border backdrop-blur-sm duration group rounded-xl shadow-custom"
           >
             <span
               class="absolute top-0 left-0 flex justify-end w-0 h-full transition-all duration-500 bg-sec group-hover:w-full"
@@ -690,7 +778,7 @@
                 class="hidden overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full p-4 sm:p-6 lg:p-8"
               >
                 <div
-                  class="w-full pb-10 max-w-6xl max-h-full bg-white rounded-3xl shadow relative overflow-y-auto overflow-x-hidden space-y-4 sm:space-y-6 text-slate-700 text-base sm:text-lg font-normal"
+                  class="w-full pb-10 max-w-4xl max-h-full bg-white rounded-3xl shadow relative overflow-y-auto overflow-x-hidden space-y-4 sm:space-y-6 text-slate-700 text-base sm:text-base font-normal"
                 >
                   <div
                     class="sticky px-10 top-0 w-full h-16 left-0 bg-white shadow-custom flex items-center justify-center"
@@ -717,7 +805,8 @@
                       </svg>
                       <span class="sr-only">Close modal</span>
                     </button>
-                    <h1 class="text-center font-semibold text-xl">${el.title}</h1>
+
+                    <h1 class="text-left font-semibold text-2xl">${el.title}</h1>
                   </div>
                   <div class="px-10 lg:px-20">
                     ${el.desc}

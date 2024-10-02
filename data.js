@@ -316,3 +316,4 @@ const incoterm = [
 ];
 
 const footer = [{}];
+

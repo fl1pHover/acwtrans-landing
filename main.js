@@ -9,8 +9,111 @@ window.addEventListener("scroll", function () {
   }
 });
 
+const topBarHTML = `
+  <div class="flex flex-col hidden lg:block">
+      <div class="mx-5 mb-2 text-sm text-white bg-sec rounded-b-xl">
+        <ul class="flex mx-auto max-w-7xl">
+          <li class="border-x border-slate-600">
+            <div
+              class="flex items-center gap-2 p-2 px-4 transition hover:text-sky-400 hover:-translate-x-1"
+            >
+              <svg
+                id="fi_3059457"
+                height="512"
+                viewBox="0 0 32 32"
+                width="512"
+                xmlns="http://www.w3.org/2000/svg"
+                class="fill-sky-400 h-4 w-4"
+              >
+                <path
+                  d="m30.035 22.594c-.053-.044-6.049-4.31-7.668-4.049-.781.138-1.227.671-2.122 1.737-.144.172-.491.583-.759.876a12.458 12.458 0 0 1 -1.651-.672 13.7 13.7 0 0 1 -6.321-6.321 12.458 12.458 0 0 1 -.672-1.651c.294-.269.706-.616.882-.764 1.061-.89 1.593-1.337 1.731-2.119.283-1.619-4.005-7.613-4.049-7.667a2.289 2.289 0 0 0 -1.706-.964c-1.738 0-6.7 6.436-6.7 7.521 0 .063.091 6.467 7.988 14.5 8.024 7.888 14.428 7.979 14.491 7.979 1.084 0 7.521-4.962 7.521-6.7a2.291 2.291 0 0 0 -.965-1.706zm-6.667 6.4c-.868-.074-6.248-.783-12.968-7.384-6.633-6.753-7.324-12.142-7.393-12.977a27.054 27.054 0 0 1 4.706-5.561c.04.04.093.1.161.178a35.391 35.391 0 0 1 3.574 6.063 11.886 11.886 0 0 1 -1.016.911 10.033 10.033 0 0 0 -1.512 1.422 1 1 0 0 0 -.171.751 11.418 11.418 0 0 0 .965 2.641 15.71 15.71 0 0 0 7.248 7.247 11.389 11.389 0 0 0 2.641.966.991.991 0 0 0 .751-.171 10.075 10.075 0 0 0 1.427-1.518c.314-.374.733-.873.892-1.014a35.146 35.146 0 0 1 6.076 3.578c.083.07.142.124.181.159a27.036 27.036 0 0 1 -5.562 4.707z"
+                ></path>
+                <path
+                  d="m23 15h2a8.009 8.009 0 0 0 -8-8v2a6.006 6.006 0 0 1 6 6z"
+                ></path>
+                <path
+                  d="m28 15h2a13.015 13.015 0 0 0 -13-13v2a11.013 11.013 0 0 1 11 11z"
+                ></path>
+              </svg>
+
+              <a href="">(+976) 7011-5028</a>
+            </div>
+          </li>
+          <li class="border-x border-slate-600">
+            <div
+              class="flex items-center gap-2 p-2 px-4 transition hover:text-sky-400 hover:-translate-x-1"
+            >
+              <svg
+                version="1.1"
+                id="fi_646094"
+                xmlns="http://www.w3.org/2000/svg"
+                x="0px"
+                y="0px"
+                viewBox="0 0 512 512"
+                class="fill-sky-400 h-4 w-4"
+              >
+                <g>
+                  <g>
+                    <path
+                      d="M467,76H45C20.137,76,0,96.262,0,121v270c0,24.885,20.285,45,45,45h422c24.655,0,45-20.03,45-45V121
+                  C512,96.306,491.943,76,467,76z M460.698,106c-9.194,9.145-167.415,166.533-172.878,171.967c-8.5,8.5-19.8,13.18-31.82,13.18
+                  s-23.32-4.681-31.848-13.208C220.478,274.284,64.003,118.634,51.302,106H460.698z M30,384.894V127.125L159.638,256.08L30,384.894z
+                   M51.321,406l129.587-128.763l22.059,21.943c14.166,14.166,33,21.967,53.033,21.967c20.033,0,38.867-7.801,53.005-21.939
+                  l22.087-21.971L460.679,406H51.321z M482,384.894L352.362,256.08L482,127.125V384.894z"
+                    ></path>
+                  </g>
+                </g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+              </svg>
+
+              <a href="">info@acwtrans.mn</a>
+            </div>
+          </li>
+          <li class="border-x border-slate-600">
+            <div
+              class="flex items-center gap-2 p-2 px-4 transition hover:text-sky-400 hover:-translate-x-1"
+            >
+              <svg
+                id="fi_3059457"
+                height="512"
+                viewBox="0 0 32 32"
+                width="512"
+                xmlns="http://www.w3.org/2000/svg"
+                class="fill-sky-400 h-4 w-4"
+              >
+                <path
+                  d="m30.035 22.594c-.053-.044-6.049-4.31-7.668-4.049-.781.138-1.227.671-2.122 1.737-.144.172-.491.583-.759.876a12.458 12.458 0 0 1 -1.651-.672 13.7 13.7 0 0 1 -6.321-6.321 12.458 12.458 0 0 1 -.672-1.651c.294-.269.706-.616.882-.764 1.061-.89 1.593-1.337 1.731-2.119.283-1.619-4.005-7.613-4.049-7.667a2.289 2.289 0 0 0 -1.706-.964c-1.738 0-6.7 6.436-6.7 7.521 0 .063.091 6.467 7.988 14.5 8.024 7.888 14.428 7.979 14.491 7.979 1.084 0 7.521-4.962 7.521-6.7a2.291 2.291 0 0 0 -.965-1.706zm-6.667 6.4c-.868-.074-6.248-.783-12.968-7.384-6.633-6.753-7.324-12.142-7.393-12.977a27.054 27.054 0 0 1 4.706-5.561c.04.04.093.1.161.178a35.391 35.391 0 0 1 3.574 6.063 11.886 11.886 0 0 1 -1.016.911 10.033 10.033 0 0 0 -1.512 1.422 1 1 0 0 0 -.171.751 11.418 11.418 0 0 0 .965 2.641 15.71 15.71 0 0 0 7.248 7.247 11.389 11.389 0 0 0 2.641.966.991.991 0 0 0 .751-.171 10.075 10.075 0 0 0 1.427-1.518c.314-.374.733-.873.892-1.014a35.146 35.146 0 0 1 6.076 3.578c.083.07.142.124.181.159a27.036 27.036 0 0 1 -5.562 4.707z"
+                ></path>
+                <path
+                  d="m23 15h2a8.009 8.009 0 0 0 -8-8v2a6.006 6.006 0 0 1 6 6z"
+                ></path>
+                <path
+                  d="m28 15h2a13.015 13.015 0 0 0 -13-13v2a11.013 11.013 0 0 1 11 11z"
+                ></path>
+              </svg>
+              <a href="">+976 9999 9999</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>`;
+
 const navHTML = `
-<div
+      <div
         class="grid items-center grid-cols-2 mx-auto lg:grid-cols-3 max-w-7xl"
       >
         <div class="items-center hidden gap-10 lg:flex">
@@ -29,7 +132,7 @@ const navHTML = `
           <div
             class="relative group py-8 transition text-sec hover:text-red-500 hover:translate-y-1"
           >
-            <a href="service.html" class="">Танд хэрэгтэй</a>
+            <a href="index.html#faq" class="">Танд хэрэгтэй</a>
             <div
               class="absolute hidden group-hover:flex top-20 left-0 bg-white border-t-2 border-rose-500"
             >
@@ -40,10 +143,10 @@ const navHTML = `
                 >
                   FAQ
                 </a>
-                <a href="faq.html" class="w-40 px-4 py-2 hover:text-rose-500">
+                <a href="container.html" class="w-40 px-4 py-2 hover:text-rose-500">
                   Контейнер
                 </a>
-                <a href="faq.html" class="w-40 px-4 py-2 hover:text-rose-500">
+                <a href="incoterm.html" class="w-40 px-4 py-2 hover:text-rose-500">
                   Инкотерм
                 </a>
               </div>
@@ -61,12 +164,14 @@ const navHTML = `
           <img
             src="https://acwtrans.mn/wp-content/uploads/2020/07/logo-tsagaan-border-2.png"
             alt="logo"
-            class="max-w-64"
+            class="max-w-48 lg:max-w-64"
           />
         </a>
+     
+
         <div class="flex justify-end gap-2 mr-4">
           <button
-            class="flex items-center gap-1 p-2 transition border-2 rounded-xl border-slate-300 hover:bg-slate-200 text-slate-600"
+            class="hidden sm:flex items-center gap-1 p-2 transition border-2 rounded-xl border-slate-300 hover:bg-slate-200 text-slate-600"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -85,7 +190,7 @@ const navHTML = `
 
           <a
             href="contact.html"
-            class="relative flex items-center gap-2 group h-11"
+            class="relative hidden md:flex items-center gap-2 group h-11"
           >
             <div
               class="relative z-10 flex items-center px-6 py-2 text-white bg-red-500 group-hover:bg-sec-600 font-semibold size-full rounded-xl"
@@ -191,22 +296,27 @@ const navHTML = `
                 </svg>
               </div>
             </div>
+     
           </a>
+          <button class="block lg:hidden" 
+            type="button" data-drawer-target="drawer-navigation" data-drawer-show="drawer-navigation" aria-controls="drawer-navigation">
+             <img src="./assets/icons/menu.png" class="w-10 h-10" />
+          </button>
         </div>
       </div>
 `;
 
 const footerHTML = `
-  <div class="m-5 bg-white rounded-3xl px-6 py-20 pb-10">
+  <div class="m-3 sm:m-5 bg-white rounded-3xl px-6 py-20 pb-10">
       <div class="max-w-7xl flex flex-col mx-auto">
         <div class="flex flex-col lg:flex-row gap-20 pb-7">
           <div class="flex flex-col items-center sm:items-start w-ful basis-1/3">
             <img
               src="https://acwtrans.mn/wp-content/uploads/2020/07/logo-tsagaan-border-2.png"
               alt=""
-              class="max-w-80"
+              class="max-w-40 md:max-w-80"
             />
-            <h1 class="text-2xl mt-1 mb-6 uppercase font-bold">
+            <h1 class="text-base sm:text-2xl mt-1 mb-6 uppercase font-bold">
               Бид бэлэн байна
             </h1>
             <div class="flex gap-3">
@@ -309,7 +419,7 @@ const footerHTML = `
             </div>
           </div>
 
-          <div class="flex flex-col col-span-full basis-2/3 gap-4 text-base sm:text-lg">
+          <div class="flex flex-col col-span-full basis-2/3 gap-4 text-sm sm:text-base md:text-lg">
             <p class="flex items-center gap-1 flex-wrap">
               <svg
                 class="mr-1"
@@ -433,7 +543,7 @@ const footerHTML = `
           </div>
         </div>
         <div
-          class="flex justify-center gap-4 md:gap-20 items-center border-t-2 h-16 text-sm md:text-base mt-6 gap-2 border-light"
+          class="flex flex-col sm:flex-row justify-center gap-2 sm:gap-4 md:gap-20 items-center border-t-2 pt-4 sm:pt-0 sm:h-16 text-sm md:text-base mt-6 gap-2 border-light"
         >
           <h1>© 2024, ACW Trans</h1>
           <div class="flex items-center">
@@ -442,7 +552,7 @@ const footerHTML = `
             <a
               href="https://kom.mn/"
               target="_blank"
-              class="flex items-center hover:-translate-y-1 transition py-4"
+              class="flex items-center hover:-translate-y-1 transition py-0 sm:py-4"
             >
               <img
                 src="./assets/images/kommn.png"
@@ -457,5 +567,99 @@ const footerHTML = `
     </div>
 `;
 
+const drawerHTML = `
+ <div
+      id="drawer-navigation"
+      class="fixed top-0 left-0 h-screen p-4 overflow-y-auto transition-transform -translate-x-full bg-white w-64 dark:bg-gray-800"
+      tabindex="-1"
+      aria-labelledby="drawer-navigation-label"
+      style="z-index: 60"
+    >
+      <h5
+        id="drawer-navigation-label"
+        class="text-base font-semibold text-gray-500 uppercase dark:text-gray-400"
+      >
+        Цэс
+      </h5>
+      <button
+        type="button"
+        data-drawer-hide="drawer-navigation"
+        aria-controls="drawer-navigation"
+        class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 absolute top-2.5 end-2.5 inline-flex items-center justify-center dark:hover:bg-gray-600 dark:hover:text-white"
+      >
+        <svg
+          class="w-3 h-3"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 14 14"
+        >
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+          />
+        </svg>
+        <span class="sr-only">Close menu</span>
+      </button>
+      <div class="py-4 overflow-y-auto">
+        <ul class="space-y-2 font-medium">
+          <li>
+            <a
+              href="index.html"
+              class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+            >
+              <span class="ms-3">Нүүр</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="about.html"
+              class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+            >
+              <span class="ms-3">Бидний тухай</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="index.html#faq"
+              class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+            >
+              <span class="ms-3">FAQ</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="incoterm.html"
+              class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+            >
+              <span class="ms-3">Инкотерм</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="container.html"
+              class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+            >
+              <span class="ms-3">Контейнер</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="contact.html"
+              class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+            >
+              <span class="ms-3">Холбогдох</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+`;
+
+document.getElementById("top-bar").innerHTML += topBarHTML;
+document.getElementById("drawer").innerHTML += drawerHTML;
 document.getElementById("nav").innerHTML += navHTML;
 document.getElementById("footer").innerHTML += footerHTML;

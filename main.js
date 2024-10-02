@@ -570,14 +570,14 @@ const footerHTML = `
 const drawerHTML = `
  <div
       id="drawer-navigation"
-      class="fixed top-0 left-0 h-screen p-4 overflow-y-auto transition-transform -translate-x-full bg-white w-64 dark:bg-gray-800"
+      class="fixed top-0 left-0 h-screen p-4 overflow-y-auto transition-transform -translate-x-full bg-sec-600 w-64"
       tabindex="-1"
       aria-labelledby="drawer-navigation-label"
       style="z-index: 60"
     >
       <h5
         id="drawer-navigation-label"
-        class="text-base font-semibold text-gray-500 uppercase dark:text-gray-400"
+        class="text-base font-semibold text-white uppercase"
       >
         Цэс
       </h5>
@@ -585,7 +585,7 @@ const drawerHTML = `
         type="button"
         data-drawer-hide="drawer-navigation"
         aria-controls="drawer-navigation"
-        class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 absolute top-2.5 end-2.5 inline-flex items-center justify-center dark:hover:bg-gray-600 dark:hover:text-white"
+        class="text-gray-400 bg-transparent hover:bg-slate-200 rounded-xl hover:text-gray-900 text-sm w-8 h-8 absolute top-2.5 end-2.5 inline-flex items-center justify-center"
       >
         <svg
           class="w-3 h-3"
@@ -609,7 +609,7 @@ const drawerHTML = `
           <li>
             <a
               href="index.html"
-              class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+              class="flex items-center p-2 text-white hover:bg-slate-600 rounded-lg group"
             >
               <span class="ms-3">Нүүр</span>
             </a>
@@ -617,7 +617,7 @@ const drawerHTML = `
           <li>
             <a
               href="about.html"
-              class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+              class="flex items-center p-2 text-white hover:bg-slate-600 rounded-lg group"
             >
               <span class="ms-3">Бидний тухай</span>
             </a>
@@ -625,7 +625,7 @@ const drawerHTML = `
           <li>
             <a
               href="index.html#faq"
-              class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+              class="flex items-center p-2 text-white hover:bg-slate-600 rounded-lg group"
             >
               <span class="ms-3">FAQ</span>
             </a>
@@ -633,7 +633,7 @@ const drawerHTML = `
           <li>
             <a
               href="incoterm.html"
-              class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+              class="flex items-center p-2 text-white hover:bg-slate-600 rounded-lg group"
             >
               <span class="ms-3">Инкотерм</span>
             </a>
@@ -641,7 +641,7 @@ const drawerHTML = `
           <li>
             <a
               href="container.html"
-              class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+              class="flex items-center p-2 text-white hover:bg-slate-600 rounded-lg group"
             >
               <span class="ms-3">Контейнер</span>
             </a>
@@ -649,12 +649,23 @@ const drawerHTML = `
           <li>
             <a
               href="contact.html"
-              class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+              class="flex items-center p-2 text-white hover:bg-slate-600 rounded-lg group"
             >
               <span class="ms-3">Холбогдох</span>
             </a>
           </li>
         </ul>
+      </div>
+      <div class="mt-32 text-center text-xs text-white h-full">
+       <p>© 2024, ACW Trans</p>
+       <div class="flex items-center justify-center mt-2">
+            Powered by
+
+            <a href="https://kom.mn/" target="_blank" class="flex items-center justify-center">
+              <img src="./assets/images/kommn.png" class="h-4 w-4 mx-1 ml-2" alt="">
+              <span class="uppercase font-semibold text-white">kom.mn</span>
+            </a>
+          </div>
       </div>
     </div>
 `;

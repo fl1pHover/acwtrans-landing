@@ -217,7 +217,7 @@ const navHTML = `
           <div
             class="relative group py-8 transition text-sec hover:text-red-500 hover:translate-y-1"
           >
-            <a href="index.html#faq" class="">Танд хэрэгтэй</a>
+            <p class="cursor-default">Танд хэрэгтэй</p>
             <div
               class="absolute hidden group-hover:flex top-20 left-0 bg-white border-t-2 border-rose-500"
             >
